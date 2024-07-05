@@ -1,4 +1,36 @@
 @import "./reset.min.css";
+@import "./fonts.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer base {
+    body {
+        @apply bg-primary
+    }
+
+    #app {
+        @apply max-w-md mx-auto py-[16px] overflow-x-hidden
+    }
+
+    button {
+        @apply p-0 m-0 border-none
+    }
+
+    .base-button-empty {
+        @apply py-[10px] bg-button px-[21px] rounded-button border-[2px] border-[#5B7DFB] border-solid text-[14px] font-[600] leading-[1.2] text-[#fff]
+    }
+
+    .base-button-rounded {
+        @apply bg-button-gradient rounded-[100px] text-[#fff] uppercase py-[6px] px-[18px] text-[16px] font-[700]
+    }
+
+    .absolute-center-x {
+        @apply absolute left-[50%] transform translate-x-[-50%]
+    }
+
+    .absolute-center-y {
+        @apply absolute top-[50%] transform translate-y-[-50%]
+    }
+}
