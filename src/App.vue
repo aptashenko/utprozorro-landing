@@ -1,5 +1,5 @@
 <template>
-  <the-header class="mb-[40px] px-[30px]" />
+  <the-header />
   <router-view />
 </template>
 

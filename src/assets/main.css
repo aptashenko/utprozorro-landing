@@ -11,7 +11,7 @@
     }
 
     #app {
-        @apply max-w-md mx-auto py-[16px] overflow-x-hidden
+        @apply max-w-md mx-auto overflow-x-hidden
     }
 
     button {
