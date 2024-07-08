@@ -4,6 +4,9 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+    scroll-behavior: smooth;
+}
 
 @layer base {
     body {
@@ -11,7 +14,7 @@
     }
 
     #app {
-        @apply max-w-md mx-auto overflow-x-hidden
+        @apply max-w-lg mx-auto overflow-x-hidden
     }
 
     button {
@@ -32,5 +35,30 @@
 
     .absolute-center-y {
         @apply absolute top-[50%] transform translate-y-[-50%]
+    }
+
+    .numeric-dot {
+        @apply before:bg-[#2E2E5C] before:flex before:items-center before:justify-center before:rounded-full before:absolute before:w-[24px] before:h-[24px] before:text-[#fff] before:top-0 before:flex-shrink-0;
+    }
+    .numeric-dot::before {
+        right: calc(100% + 13px);
+        font-size: 13px;
+        font-weight: 600;
+        line-height: 120%;
+        color: #F4F5FB;
+    }
+
+    .numeric-dot-line {
+        @apply before:block before:absolute before:top-0 before:left-[14px] before:w-[2px] before:bg-[#2F2F5C] before:content-[''];
+    }
+
+    .numeric-dot-line::before {
+        height: calc(100% - 50px);
+    }
+
+    .faq-item-button {
+        border-radius: 4.571px;
+        padding: 5px;
+        background: linear-gradient(151deg, #2E2E5C 16.61%, #202430 123.73%);
     }
 }
