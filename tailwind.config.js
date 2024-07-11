@@ -27,7 +27,7 @@ export default {
                 'neutral-gradient': 'linear-gradient(125deg, rgba(32, 36, 48, 0.06) 0%, rgba(178, 98, 255, 0.06) 100%)',
             },
             boxShadow: {
-                'faq-box': '0px 5px 16px 0px rgba(8, 15, 52, 0.06)'
+                'faq-box': '0px 5px 16px 0px rgba(8, 15, 52, 0.06)',
             }
         },
         fontFamily: {

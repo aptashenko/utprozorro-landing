@@ -1,4 +1,5 @@
 <template>
+  <the-header />
   <main class="relative mx-auto">
     <div class="px-[20px]">
       <div class="rounded-[465px] bg-[#2A2A50] blur-[100px] w-full pb-[130%] absolute-center-x top-[-390px] pointer-events-none z-[-1]" />
@@ -374,12 +375,15 @@
       </base-button>
     </form>
   </section>
+  <the-footer />
 </template>
 <script setup>
 import BaseButton from "@/components/ui/BaseButton.vue";
 import ISvg from "@/components/shared/ISvg.vue";
 import {Collapse} from "vue-collapsed";
 import {useCollapse} from "@/composables/useCollapse.js";
+import TheHeader from "@/components/TheHeader.vue";
+import TheFooter from "@/components/TheFooter.vue";
 const questions = [
   {
     id: 1,
