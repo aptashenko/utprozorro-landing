@@ -21,7 +21,10 @@ const { currentQuestion, questionId } = useQuiz();
 const components = {
   question: 'question.vue',
   content: 'content-page.vue',
-  'right-place': 'right-place.vue'
+  'right-place': 'right-place.vue',
+  'users-scores': 'users-scores.vue',
+  'get-knowledge': 'get-knowledge.vue',
+  'reviews-page': 'reviews-page.vue'
 };
 
 const currentComponent = ref(null);

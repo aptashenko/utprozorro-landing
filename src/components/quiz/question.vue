@@ -13,8 +13,14 @@
       <div class="flex flex-col gap-[10px] mt-[20px]">
         <button
             v-for="answer of currentQuestion.answers"
-            class="py-[18px] px-[16px] rounded-[8px] bg-[#4D5280] text-[#fff] text-[16px] font-[500] leading-[1.2] text-left"
-            :class="{'border-[1px] border-solid font-[700] border-[#fff]': answer === currentQuestion.answer}"
+            class="py-[18px] border-[1px] border-solid px-[16px] transition rounded-[8px] bg-[#4D5280] text-[#fff] text-[16px] leading-[1.2] text-left"
+            :class="[
+                answer === currentQuestion.answer
+                ? 'border-solid border-[#fff] font-[600]'
+                : 'border-[transparent] font-[500]',
+                currentQuestion.answer && answer !== currentQuestion.answer ? 'opacity-20' : 'opacity-100'
+                ]"
+            :disabled="disableAnswerButton"
             @click="nextPage(answer)"
         >
           {{answer}}
@@ -27,7 +33,7 @@
 <script setup>
 import {useQuiz} from "@/composables/useQuiz.js";
 import {computed} from "vue";
-const { currentQuestion, nextPage } = useQuiz();
+const { currentQuestion, nextPage, disableAnswerButton } = useQuiz();
 const image = computed(() => new URL(`../../assets/images/quiz/${currentQuestion.value.image}`, import.meta.url).href)
 </script>
 
