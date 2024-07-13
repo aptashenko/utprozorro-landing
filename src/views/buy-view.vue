@@ -12,7 +12,7 @@
       <h1 class="text-[36px] font-[700] text-[#fff] leading-[1.2] tracking-[-0.36px] mb-[28px]">
         Станьте експертом з тендерів з нуля!
       </h1>
-      <base-button variant="rounded" class="w-full flex items-center justify-center pr-[8px]">
+      <base-button variant="rounded" class="w-full flex items-center justify-center pr-[8px]" @click="openCheckout({price: usersPrice})">
         <span class="flex-1">
           Записатись на курс
         </span>
@@ -384,6 +384,10 @@ import {Collapse} from "vue-collapsed";
 import {useCollapse} from "@/composables/useCollapse.js";
 import TheHeader from "@/components/TheHeader.vue";
 import TheFooter from "@/components/TheFooter.vue";
+import {usePopups} from "@/composables/usePopups.js";
+import PRICES from '@/common/price-configs/index'
+import {computed, ref} from "vue";
+import {useQuiz} from "@/composables/useQuiz.js";
 const questions = [
   {
     id: 1,
@@ -417,8 +421,15 @@ const questions = [
   }
 ]
 
+const { usersData } = useQuiz();
 const { collapseItems, setCollapsed } = useCollapse(questions)
+const { openCheckout } = usePopups();
 
+const priceType = ref('DEFAULT')
+const usersPrice = computed(() => {
+  const priceWithPromocode = PRICES.DEFAULT - PRICES.DEFAULT * (usersData.promocode / 100);
+  return usersData.promocode && priceType.value === 'DEFAULT' ? priceWithPromocode : PRICES[priceType.value];
+})
 </script>
 
 <style scoped>

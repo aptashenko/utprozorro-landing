@@ -34,6 +34,11 @@
         @apply bg-button-gradient rounded-[100px] text-[#fff] uppercase py-[6px] px-[18px] text-[16px] font-[700]
     }
 
+    .base-button-fortune {
+        @apply bg-[#FF53A9] rounded-[100px] text-[#fff] uppercase py-[18px] px-[24px] text-[16px] font-[700];
+        box-shadow: 0px 0px 12px 0px #B21E61;
+    }
+
     .base-button-quiz {
         @apply font-[600] block text-center leading-[1.2] text-[16px] py-[18px] px-[24px] bg-[#642DFF] rounded-[100px] text-[#fff];
         box-shadow: 0px 0px 12px 0px rgba(143, 103, 255, 0.37);

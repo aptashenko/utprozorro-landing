@@ -1,9 +1,11 @@
 <template>
   <div>
-    <transition name="slide-top">
-      <div v-if="currentQuestion.component === 'question'">
-        <question-head />
-        <question-progress />
+    <transition name="slide-top" mode="out-in">
+      <div v-if="currentQuestion.component === 'question'" class="fixed top-0 left-0 w-full">
+        <div class="max-w-[32rem] mx-auto">
+          <question-head />
+          <question-progress />
+        </div>
       </div>
     </transition>
     <transition name="fade" mode="out-in">
@@ -24,7 +26,10 @@ const components = {
   'right-place': 'right-place.vue',
   'users-scores': 'users-scores.vue',
   'get-knowledge': 'get-knowledge.vue',
-  'reviews-page': 'reviews-page.vue'
+  'reviews-page': 'reviews-page.vue',
+  'loading-page': 'loading-page.vue',
+  'email-page': 'email-page.vue',
+  'fortune-wheel': 'fortune-wheel.vue'
 };
 
 const currentComponent = ref(null);

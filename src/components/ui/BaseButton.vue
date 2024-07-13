@@ -1,5 +1,9 @@
 <template>
-  <component :is="to ? RouterLink : 'button'" :to="to" :class="[buttonStyle]">
+  <component
+      :is="to ? RouterLink : 'button'"
+      :to="to"
+      :class="[buttonStyle, 'transition', {'opacity-30': $attrs.disabled}]"
+  >
     <slot />
   </component>
 </template>
@@ -22,6 +26,7 @@ const buttonStyle = computed(() => ({
   empty: 'base-button-empty',
   rounded: 'base-button-rounded',
   quiz: 'base-button-quiz',
-  icon: 'base-button-icon'
+  icon: 'base-button-icon',
+  fortune: 'base-button-fortune'
 })[props.variant])
 </script>

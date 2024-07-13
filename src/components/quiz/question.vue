@@ -1,5 +1,5 @@
 <template>
-  <div class="grid place-items-center pb-[30px]">
+  <div class="grid place-items-center pt-[52px] pb-[30px]">
     <div class="img-gradient-top relative">
       <div class="img-gradient-bottom relative">
         <img :src="image" />

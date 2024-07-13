@@ -15,7 +15,8 @@ export default {
             primary: '#202430',
             violet: '#7F84FF',
             neutral: '#C7D2FF',
-            button: '#35356475'
+            button: '#35356475',
+            error: '#E53935'
         },
         extend: {
             borderRadius: {

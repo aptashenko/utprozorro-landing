@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import StartView from "@/views/start-view.vue";
 import BuyView from "@/views/buy-view.vue";
+import {isNewUser} from "@/router/navigation-guards/quiz-page.js";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -18,7 +19,8 @@ const router = createRouter({
     {
       path: '/quiz/:id',
       name: 'quiz',
-      component: () => import('../views/quiz-view.vue')
+      component: () => import('../views/quiz-view.vue'),
+      beforeEnter: isNewUser
     },
     {
       path: '/buy',
