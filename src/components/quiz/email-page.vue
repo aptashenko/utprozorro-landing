@@ -58,10 +58,10 @@ setTimeout(() => {
   showSkip.value = true
 }, 5000)
 
-const onSubmit = async (payload) => {
-  const success = await addNewUser(payload);
+const onSubmit = async ({email}) => {
+  const success = await addNewUser({email, user_id: usersData.user_id});
   if (success) {
-    usersData.email = payload.email;
+    usersData.email = email;
     localStorage.setItem('usersData', JSON.stringify(usersData))
     router.push(nextQuestionPath.value)
   }

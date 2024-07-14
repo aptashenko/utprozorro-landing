@@ -9,12 +9,12 @@
 import { RouterView } from 'vue-router';
 import {usePopups} from "@/composables/usePopups.js";
 import BasePopupComponent from "@/components/popups/BasePopupComponent.vue";
-import {useFetchUsers} from "@/composables/useFetchUsers.js";
+// import {useFetchUsers} from "@/composables/useFetchUsers.js";
 const { globalPopUpState } = usePopups();
 
-const { getAllUsers } = useFetchUsers();
-
-getAllUsers()
+// const { getAllUsers } = useFetchUsers();
+//
+// getAllUsers()
 </script>
 
 <style scoped>

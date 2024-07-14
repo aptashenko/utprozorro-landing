@@ -12,7 +12,6 @@ export function useFetchUsers() {
             const {data, status} = await FETCH.users.GET_LIST();
             if (status === 200) {
                 userList.value = data;
-                console.log(userList.value)
             }
         } catch (er) {
             console.error(er)

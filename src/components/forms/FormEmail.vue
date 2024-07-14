@@ -1,6 +1,7 @@
 <template>
   <Form
       id="email"
+      @keydown.enter.prevent
       :validation-schema="schema"
       v-slot="{ errors, values }"
   >
@@ -16,6 +17,7 @@
         variant="quiz"
         type="button"
         class="w-full mt-[24px]"
+        @keydown.enter.prevent
         @click.prevent="onSubmit(values)"
     >
       Получить промокод
@@ -33,7 +35,7 @@ import {useQuiz} from "@/composables/useQuiz.js";
 
 const emit = defineEmits(['on-submit'])
 
-const { addNewUser, loaders } = useFetchUsers()
+const { loaders } = useFetchUsers()
 const { usersData } = useQuiz()
 defineRule('required', value => {
   if (!value || !value.length) {

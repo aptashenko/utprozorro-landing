@@ -27,6 +27,7 @@ const buttonStyle = computed(() => ({
   rounded: 'base-button-rounded',
   quiz: 'base-button-quiz',
   icon: 'base-button-icon',
-  fortune: 'base-button-fortune'
+  fortune: 'base-button-fortune',
+  'fortune-inverse': 'base-button-fortune-inverse'
 })[props.variant])
 </script>

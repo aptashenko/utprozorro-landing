@@ -49,8 +49,25 @@
 </template>
 
 <script setup>
-import QuizView from "@/views/quiz-view.vue";
 import BaseButton from "@/components/ui/BaseButton.vue";
+import {generateId} from "@/utils/id-generator.js";
+import {useCookies} from "@/composables/useCookies.js";
+import {useQuiz} from "@/composables/useQuiz.js";
+
+const { getCookie, setCookie } = useCookies();
+const { usersData } = useQuiz();
+const manageUserId = () => {
+  const user_id = getCookie('user_id');
+  if (!user_id) {
+    const id = generateId();
+    setCookie('user_id', id, 30)
+    usersData.user_id = id;
+  } else {
+    usersData.user_id = user_id;
+  }
+}
+
+manageUserId()
 </script>
 
 <style scoped>

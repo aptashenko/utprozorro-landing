@@ -35,7 +35,12 @@
     }
 
     .base-button-fortune {
-        @apply bg-[#FF53A9] rounded-[100px] text-[#fff] uppercase py-[18px] px-[24px] text-[16px] font-[700];
+        @apply bg-[#FF53A9] rounded-[100px] text-[#fff] uppercase py-[17px] px-[24px] text-[16px] font-[700];
+        box-shadow: 0px 0px 12px 0px #B21E61;
+    }
+
+    .base-button-fortune-inverse {
+        @apply rounded-[100px] bg-[#000000B3] border-[#EC3591] border-[2px] border-solid  text-[#fff] uppercase py-[15px] px-[24px] text-[16px] font-[700];
         box-shadow: 0px 0px 12px 0px #B21E61;
     }
 
@@ -54,6 +59,16 @@
 
     .absolute-center-y {
         @apply absolute top-[50%] transform translate-y-[-50%]
+    }
+
+    .pink-title {
+        color: #FFEFF4;
+        text-shadow:
+                -1px -1px 0 #D81276,
+                1px -1px 0 #D81276,
+                -1px  1px 0 #D81276,
+                1px  1px 0 #D81276,
+                0px 2px 4px rgba(255, 75, 165, 0.74);
     }
 
     .numeric-dot {

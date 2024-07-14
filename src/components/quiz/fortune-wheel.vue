@@ -1,30 +1,49 @@
 <template>
-  <div class="fortune-bg min-h-[100vh] px-[20px] pt-[150px]">
+  <div
+      class="fortune-bg min-h-[100vh] px-[20px] pt-[120px]"
+      :class="[currentTry !== playSettings.maxTries && prize ? 'pb-[180px]' : 'pb-[100px]']"
+  >
+    <h2 class="pink-title text-center text-[30px] font-[600] leading-[1.3] uppercase tracking-[-1px] mb-[15px]">
+      Крутіть колесо
+    </h2>
+
     <wheel-of-fortune
         ref="wheel"
         :settings="playSettings"
         @set-prize="setPrize"
     />
-    <transition name="fade" mode="out-in">
-      <button
-          v-if="currentTry > 1 && !wheel?.isSpinning"
-          class="block text-[#C7D2FF] transition duration-1000 text-[15px] font-[700] uppercase leading-[1.2] tracking-[-1px] mx-auto w-fit"
-          @click="endGame"
-      >
-        закончить игру
-      </button>
-    </transition>
-    <transition mode="out-in">
-      <base-button
-          v-if="showButton"
-          variant="fortune"
-          :disabled="wheel?.isSpinning"
-          class="w-full mt-[10px]"
-          @click="rotateWheel"
-      >
-        {{buttonName}}
-      </base-button>
-    </transition>
+    <div class="py-[12px] bg-wrapper">
+      <img :src="resultEmoji" class="block w-[53px] mx-auto mb-[10px]" />
+      <p v-if="prize" class="text-[22px] font-[700] leading-[1.2] text-center text-[#FFCEE6] mb-[10px]">
+        {{ prize }}% скидка
+      </p>
+      <p class="text-[16px] font-[700] leading-[1.2] text-center text-[#FFCEE6]" v-html="resultText" />
+    </div>
+    <div class="fixed bottom-0 left-0 w-full py-[20px]">
+      <div class="max-w-[32rem] mx-auto px-[20px] flex flex-col gap-[10px]">
+        <base-button
+            v-if="currentTry !== playSettings.maxTries"
+            variant="fortune"
+            :disabled="wheel?.isSpinning"
+            class="w-full"
+            :class="{'pulse-animation': !wheel?.isSpinning}"
+            @click="rotateWheel"
+        >
+          {{buttonName}}
+        </base-button>
+        <transition mode="out-in">
+          <base-button
+              v-if="prize"
+              :variant="currentTry !== playSettings.maxTries ? 'fortune-inverse' : 'fortune'"
+              :disabled="wheel?.isSpinning"
+              class="w-full"
+              @click="endGame"
+          >
+            Забрать скидку
+          </base-button>
+        </transition>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -68,8 +87,30 @@ const setPrize = value => {
   setPromoCode(value)
 }
 
-const buttonName = computed(() => currentTry.value < 1 ? 'Прокрутить' : `Попробовать снова (${playSettings.maxTries - currentTry.value})`)
-const showButton = computed(() => currentTry.value < playSettings.maxTries);
+const resultText = computed(() => {
+  const texts = [
+      'Испытайте удачу с нашим Колесом!<br>У вас 3 попытки выиграть максимальную скидку.',
+      'Не повезло! Но не расстраивайтесь,<br>попробуйте снова!',
+      'Поздравляем!<br>Отличная возможность сэкономить!',
+      'Ура! Вам повезло!<br>Это супер классная скидка!'
+  ]
+
+  return texts[currentTry.value]
+})
+
+const resultEmoji = computed(() => {
+  const emoji = [
+      'lucky-icon.png',
+      'sad-icon.png',
+      'finger-up-icon.png',
+      'confetti-icon.png'
+  ];
+
+  return new URL(`../../assets/images/emoji/${emoji[currentTry.value]}`, import.meta.url).href
+})
+
+
+const buttonName = computed(() => `Прокрутить: ${playSettings.maxTries - currentTry.value}`)
 const rotateWheel = () => {
   wheel.value.launchSpin()
 }
@@ -90,6 +131,10 @@ if (!usersData.email) {
 .fortune-bg {
   background: url('@/assets/images/fortune-bg.png');
   background-size: cover;
+}
+
+.bg-wrapper {
+  background: rgba(255, 168, 212, 0.28);
 }
 
 .v-enter-active,

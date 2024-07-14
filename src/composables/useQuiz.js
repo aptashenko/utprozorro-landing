@@ -4,7 +4,8 @@ import {useRouter} from "vue-router";
 const defaultUsersData = {
     answers: {},
     promocode: null,
-    email: null
+    email: null,
+    user_id: null
 }
 const savedUsersData = JSON.parse(localStorage.getItem('usersData'));
 const usersData = reactive(savedUsersData || defaultUsersData);

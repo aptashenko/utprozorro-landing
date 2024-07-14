@@ -17,22 +17,18 @@ const baseRequest = axios.create({
 
 baseRequest.interceptors.request.use(
     (config) => {
-        console.log('fullfilled: ', config)
         return config
     },
     (error) => {
-        console.log('error: ', error)
         return Promise.reject(error)
     }
 )
 
 baseRequest.interceptors.response.use(
     (config) => {
-        console.log('fullfilled: ', config)
         return config
     },
     (error) => {
-        console.log('error: ', error)
         return Promise.reject(error)
     }
 )
