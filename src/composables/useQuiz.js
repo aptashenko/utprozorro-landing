@@ -3,7 +3,8 @@ import questionsContent from "@/common/quiz-configs/content.json";
 import {useRouter} from "vue-router";
 const defaultUsersData = {
     answers: {},
-    promocode: null
+    promocode: null,
+    email: null
 }
 const savedUsersData = JSON.parse(localStorage.getItem('usersData'));
 const usersData = reactive(savedUsersData || defaultUsersData);

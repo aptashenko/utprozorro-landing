@@ -5,7 +5,16 @@
         :settings="playSettings"
         @set-prize="setPrize"
     />
-    <transition @after-leave="onLeave" mode="out-in">
+    <transition name="fade" mode="out-in">
+      <button
+          v-if="currentTry > 1 && !wheel?.isSpinning"
+          class="block text-[#C7D2FF] transition duration-1000 text-[15px] font-[700] uppercase leading-[1.2] tracking-[-1px] mx-auto w-fit"
+          @click="endGame"
+      >
+        закончить игру
+      </button>
+    </transition>
+    <transition mode="out-in">
       <base-button
           v-if="showButton"
           variant="fortune"
@@ -25,9 +34,11 @@ import WheelOfFortune from "@/components/quiz/fortune-elements/WheelOfFortune.vu
 import BaseButton from "@/components/ui/BaseButton.vue";
 import {useRouter} from "vue-router";
 import {useQuiz} from "@/composables/useQuiz.js";
+import {useFetchUsers} from "@/composables/useFetchUsers.js";
 
 const router = useRouter();
-const { lastQuestionRedirect, setPromoCode } = useQuiz();
+const { sendPromocode } = useFetchUsers();
+const { lastQuestionRedirect, setPromoCode, usersData } = useQuiz();
 const wheel = ref(null)
 const gameRules = [
   {
@@ -63,12 +74,16 @@ const rotateWheel = () => {
   wheel.value.launchSpin()
 }
 
-const onLeave = () => {
-  setTimeout(() => {
+const endGame = async () => {
+  const success = await sendPromocode({promocode: usersData.promocode, email: usersData.email})
+  if (success) {
     router.push(lastQuestionRedirect.value)
-  }, 3000)
+  }
 }
 
+if (!usersData.email) {
+  router.push({name: 'quiz', params: {id: 16}})
+}
 </script>
 
 <style scoped>

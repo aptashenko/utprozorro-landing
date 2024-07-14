@@ -2,7 +2,7 @@
   <div class="relative pt-[12px] min-h-[100vh] flex flex-col">
     <div class="px-[20px] pb-[24px] flex-1">
       <router-link
-          :to="nextQuestionPath"
+          :to="{name: 'landing'}"
           class="block text-[#C7D2FF] transition duration-1000 text-[15px] leading-[1.2] tracking-[-1px] ml-auto w-fit mb-[10px] opacity-0"
           :class="{'opacity-100': showSkip}"
       >
@@ -46,17 +46,25 @@ import {useCountdown} from "@/composables/useCountdown";
 import {ref} from "vue";
 import FormEmail from "@/components/forms/FormEmail.vue";
 import {useQuiz} from "@/composables/useQuiz.js";
+import {useRouter} from "vue-router";
+import {useFetchUsers} from "@/composables/useFetchUsers.js";
 const { time, startTimer, stopTimer } = useCountdown({key: 'countdown', count: 120});
-const { nextQuestionPath } = useQuiz()
+const { nextQuestionPath, usersData } = useQuiz();
+const { addNewUser } = useFetchUsers()
+const router = useRouter()
 const showSkip = ref(false);
 
 setTimeout(() => {
   showSkip.value = true
 }, 5000)
 
-
-const onSubmit = (values) => {
-  console.log(values)
+const onSubmit = async (payload) => {
+  const success = await addNewUser(payload);
+  if (success) {
+    usersData.email = payload.email;
+    localStorage.setItem('usersData', JSON.stringify(usersData))
+    router.push(nextQuestionPath.value)
+  }
 }
 
 startTimer();
