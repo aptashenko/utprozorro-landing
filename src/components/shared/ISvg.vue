@@ -7,12 +7,14 @@ import { defineAsyncComponent, ref } from 'vue';
 
 const props = defineProps({
   name: {
-    type: String,
+    type: [String, Object],
     required: true,
   },
 });
 
 const imgComponent = ref(defineAsyncComponent(
-    () => import(`../../assets/images/svg/${props.name.toLowerCase()}.vue`)
+    () => props.name.dir
+        ? import(`../../assets/images/svg/${props.name.dir}/${props.name.icon.toLowerCase()}.vue`)
+        : import(`../../assets/images/svg/${props.name.toLowerCase()}.vue`)
 ))
 </script>

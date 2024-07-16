@@ -1,28 +1,78 @@
 <template>
   <the-header />
   <main class="relative mx-auto">
-    <div class="px-[20px]">
+    <div class="px-[20px] pb-[50px]">
       <div class="rounded-[465px] bg-[#2A2A50] blur-[100px] w-full pb-[130%] absolute-center-x top-[-390px] pointer-events-none z-[-1]" />
-      <h3 class="text-[18px] font-[600] text-violet uppercase mb-[20px]">
-        Великий онлайн курс по тендерам
+      <h3 class="text-[17px] font-[600] text-violet leading-[1.3] tracking-[-0.17px] uppercase mb-[20px]">
+        Наше специальное предложение для вас
       </h3>
-      <h2 class="text-[16px] text-neutral mb-[6px]">
-        Ваша нова кар’єра починається тут:
+      <h2 class="text-[16px] leading-[1.2] text-neutral mb-[6px]">
+        Мы предлагаем вам уникальный онлайн курс
       </h2>
       <h1 class="text-[36px] font-[700] text-[#fff] leading-[1.2] tracking-[-0.36px] mb-[28px]">
         Станьте експертом з тендерів з нуля!
       </h1>
-      <base-button variant="rounded" class="w-full flex items-center justify-center pr-[8px]" @click="openCheckout({price: usersPrice})">
+      <base-button variant="rounded" class="w-full flex items-center justify-center pr-[8px] mb-[31px]" @click="openCheckout({price: priceSettings})">
+        <span class="flex-1">
+          Записатись на курс
+        </span>
+        <i-svg name="button-angle" class="flex-shrink-0" />
+      </base-button>
+      <p class="text-[22px] leading-[1.2] font-[600] text-[#fff] mb-[16px]">
+        Диаграмма ниже показывает, как наш курс улучшит вашу жизнь.
+      </p>
+      <div class="px-[28px]">
+        <img src="@/assets/images/diagram.png" class="w-full mx-auto block" />
+      </div>
+      <div class="flex items-center gap-[6px] mt-[24px]">
+        <div class="flex items-center gap-[4px]">
+          <span class="bg-[#FC9822] w-[21px] h-[9px] rounded-[20px]" />
+          <p class="text-[#C7D2FF] text-[12px] font-[500] leading-[23px]">До курса</p>
+        </div>
+        <div class="flex items-center gap-[4px]">
+          <span class="bg-[#2276FC] w-[21px] h-[9px] rounded-[20px]" />
+          <p class="text-[#C7D2FF] text-[12px] font-[500] leading-[23px]">После курса</p>
+        </div>
+      </div>
+      <div class="mt-[30px] flex flex-col gap-[12px]">
+        <div>
+          <h3 class="mb-[2px] text-[#C7D2FF] leading-[1.2] text-[15px] font-[600]">A. Финансовая стабильность:</h3>
+          <p class="text-[#fff] text-[18px] leading-[1.2] font-[600]">Возрастает с 40% до 85%</p>
+        </div>
+        <div>
+          <h3 class="mb-[2px] text-[#C7D2FF] leading-[1.2] text-[15px] font-[600]">B. Профессиональные навыки:</h3>
+          <p class="text-[#fff] text-[18px] leading-[1.2] font-[600]">Возрастает с 30% до 90%</p>
+        </div>
+        <div>
+          <h3 class="mb-[2px] text-[#C7D2FF] leading-[1.2] text-[15px] font-[600]">C. Возможности для карьерного роста:</h3>
+          <p class="text-[#fff] text-[18px] leading-[1.2] font-[600]">Возрастает с 25% до 80%</p>
+        </div>
+        <div>
+          <h3 class="mb-[2px] text-[#C7D2FF] leading-[1.2] text-[15px] font-[600]">D. Уверенность в себе:</h3>
+          <p class="text-[#fff] text-[18px] leading-[1.2] font-[600]">Возрастает с 50% до 95%</p>
+        </div>
+        <div>
+          <h3 class="mb-[2px] text-[#C7D2FF] leading-[1.2] text-[15px] font-[600]">E. Рабочие связи и нетворкинг:</h3>
+          <p class="text-[#fff] text-[18px] leading-[1.2] font-[600]">Возрастает с 35% до 75%</p>
+        </div>
+        <div>
+          <h3 class="mb-[2px] text-[#C7D2FF] leading-[1.2] text-[15px] font-[600]">F. Рабочая гибкость и свободное время:</h3>
+          <p class="text-[#fff] text-[18px] leading-[1.2] font-[600]">Возрастает с 20% до 70%</p>
+        </div>
+      </div>
+      <p class="text-[#C7D2FF] leading-[1.2] text-[18px] font-[600] mt-[24px]">
+        Из диаграммы видно, что наш курс обеспечит вам финансовую стабильность, карьерный рост, уверенность и гибкость, улучшая все аспекты вашей жизни.
+      </p>
+      <base-button variant="rounded" class="w-full mt-[24px] flex items-center justify-center pr-[8px] mb-[31px]" @click="openCheckout({price: usersPrice})">
         <span class="flex-1">
           Записатись на курс
         </span>
         <i-svg name="button-angle" class="flex-shrink-0" />
       </base-button>
     </div>
-    <img src="@/assets/images/judicial-gavel.png" class="block w-full mt-[30px]" />
     <div class="rounded-[620px] frame-gradient blur-[150px] w-[620px] pb-[100%] absolute left-[-300px] bottom-0 pointer-events-none z-[-1]" />
   </main>
-  <section class="relative z-[2] bg-[#F4F5FB] py-[80px] mt-[-50px]">
+  <section class="relative z-[2] bg-[#F4F5FB] py-[80px]">
     <img src="@/assets/images/diamant-top.png" class="absolute right-0 top-0 w-[75px] blur-[6px] z-[-1] pointer-events-none" />
     <div class="px-[20px]">
       <h2 class="text-[36px] font-[700] text-[#2E2F5B]">
@@ -91,7 +141,7 @@
       </div>
     </div>
   </section>
-  <section>
+  <section v-if="!usersData.user_id">
     <div class="relative z-[2] bg-gift px-[20px] pt-[40px] pb-[120px]">
       <div class="absolute w-full h-full top-0 left-0 right-0 bottom-0 bg-[url('@/assets/images/gift-bg.png')] bg-cover z-[-1] pointer-events-none" />
       <p class="text-[17px] text-neutral font-[700] leading-[1.4] uppercase mb-[6px]">
@@ -385,8 +435,8 @@ import {useCollapse} from "@/composables/useCollapse.js";
 import TheHeader from "@/components/TheHeader.vue";
 import TheFooter from "@/components/TheFooter.vue";
 import {usePopups} from "@/composables/usePopups.js";
-import PRICES from '@/common/price-configs/index'
-import {computed, ref} from "vue";
+import { BASIC_PLAN } from '@/common/price-configs/index'
+import {computed} from "vue";
 import {useQuiz} from "@/composables/useQuiz.js";
 const questions = [
   {
@@ -425,10 +475,8 @@ const { usersData } = useQuiz();
 const { collapseItems, setCollapsed } = useCollapse(questions)
 const { openCheckout } = usePopups();
 
-const priceType = ref('DEFAULT')
-const usersPrice = computed(() => {
-  const priceWithPromocode = PRICES.DEFAULT - PRICES.DEFAULT * (usersData.promocode / 100);
-  return usersData.promocode && priceType.value === 'DEFAULT' ? priceWithPromocode : PRICES[priceType.value];
+const priceSettings = computed(() => {
+  return BASIC_PLAN
 })
 </script>
 
