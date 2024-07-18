@@ -28,5 +28,9 @@ export function usePopups() {
     openPopup(POPUPS.checkout.component, {...POPUPS.checkout.props, ...props})
   }
 
-  return { globalPopUpState, closePopup, openPopup, toggleComponent, openCheckout };
+  const openAlert = props => {
+    openPopup(POPUPS.alert.component, {...POPUPS.alert.props, ...props})
+  }
+
+  return { globalPopUpState, closePopup, openPopup, openAlert, toggleComponent, openCheckout };
 }

@@ -1,9 +1,11 @@
 <template>
   <header class="pt-[16px] pb-[30px] px-[20px]">
     <div class="flex items-center gap-[12px] justify-end">
-      <base-button class="px-[14px] py-[8px]">
-        <i-svg name="letter" />
-      </base-button>
+      <a href="#supportForm">
+        <base-button class="px-[14px] py-[8px]">
+          <i-svg name="letter" />
+        </base-button>
+      </a>
       <base-button>
         Увійти
       </base-button>

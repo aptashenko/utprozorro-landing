@@ -1,6 +1,6 @@
 <template>
   <div class="fixed bottom-0 left-0 w-full">
-    <div class="bg-[#EEECF7] flex flex-col rounded-tl-[16px] rounded-tr-[16px] w-full max-w-[32rem] mx-auto p-[40px] min-h-[50vh]">
+    <div class="bg-[#EEECF7] relative flex flex-col rounded-tl-[16px] rounded-tr-[16px] w-full max-w-[32rem] mx-auto p-[40px] min-h-[50vh]">
       <div class="absolute top-[15px] right-[15px]">
         <base-button variant="icon" @click="toggleComponent">
           <i-svg name="cross" />
@@ -11,11 +11,11 @@
           <p class="text-[32px] leading-[1.2] text-[#292758] font-[600] text-center">
             {{ priceToPay }}₴
           </p>
-          <p class="text-[20px] leading-[1.2] line-through text-[#29275899] font-[500]">
+          <p v-if="usersData.promocode || price.name !== 'basic'" class="text-[20px] leading-[1.2] line-through text-[#29275899] font-[500]">
             1000,00₴
           </p>
         </div>
-        <p class="text-[#8799C899] text-[18px] font-[600] leading-[1.2] mb-[16px]">
+        <p v-if="usersData.promocode" class="text-[#8799C899] text-[18px] font-[600] leading-[1.2] mb-[16px]">
           Скидка {{usersData.promocode}}%
         </p>
         <base-button variant="rounded" class="w-full py-[18px] mt-auto">
@@ -73,8 +73,9 @@ import ISvg from "@/components/shared/ISvg.vue";
 import {computed, onBeforeUnmount} from "vue";
 import {usePopups} from "@/composables/usePopups.js";
 import {useQuiz} from "@/composables/useQuiz.js";
+import { usePlansSettings } from '@/composables/usePlansSettings.js'
 
-const { toggleComponent } = usePopups()
+const { toggleComponent, openAlert } = usePopups()
 
 const props = defineProps({
   price: {
@@ -83,15 +84,18 @@ const props = defineProps({
   }
 })
 
+const { planIndex } = usePlansSettings()
 const { usersData } = useQuiz();
 
-const discount = computed(() => {
-  return props.price.amount / usersData.promocode || 0
-})
+const discount = computed(() => usersData.promocode ? props.price.amount * (usersData.promocode / 100) : 0)
 
 const priceToPay = computed(() => (props.price.name === 'basic' ? props.price.amount - discount.value : props.price.amount).toFixed(2).replace('.', ','))
 
 onBeforeUnmount(() => {
-  console.log('closed')
+  if (planIndex.value < 2) {
+    setTimeout(() => {
+      openAlert()
+    }, 1000)
+  }
 })
 </script>

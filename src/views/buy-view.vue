@@ -12,7 +12,7 @@
       <h1 class="text-[36px] font-[700] text-[#fff] leading-[1.2] tracking-[-0.36px] mb-[28px]">
         Станьте експертом з тендерів з нуля!
       </h1>
-      <base-button variant="rounded" class="w-full flex items-center justify-center pr-[8px] mb-[31px]" @click="openCheckout({price: priceSettings})">
+      <base-button variant="rounded" class="w-full flex items-center justify-center pr-[8px] mb-[31px]" @click="openPayCheckout">
         <span class="flex-1">
           Записатись на курс
         </span>
@@ -63,7 +63,7 @@
       <p class="text-[#C7D2FF] leading-[1.2] text-[18px] font-[600] mt-[24px]">
         Из диаграммы видно, что наш курс обеспечит вам финансовую стабильность, карьерный рост, уверенность и гибкость, улучшая все аспекты вашей жизни.
       </p>
-      <base-button variant="rounded" class="w-full mt-[24px] flex items-center justify-center pr-[8px] mb-[31px]" @click="openCheckout({price: usersPrice})">
+      <base-button variant="rounded" class="w-full mt-[24px] flex items-center justify-center pr-[8px] mb-[31px]" @click="openPayCheckout">
         <span class="flex-1">
           Записатись на курс
         </span>
@@ -113,6 +113,7 @@
       <base-button
           variant="rounded"
           class="w-full py-[16px] mt-[40px]"
+          @click="openPayCheckout"
       >
         Вступити на курс
       </base-button>
@@ -141,14 +142,14 @@
       </div>
     </div>
   </section>
-  <section v-if="!usersData.user_id">
+  <section v-if="!usersData.promocode">
     <div class="relative z-[2] bg-gift px-[20px] pt-[40px] pb-[120px]">
       <div class="absolute w-full h-full top-0 left-0 right-0 bottom-0 bg-[url('@/assets/images/gift-bg.png')] bg-cover z-[-1] pointer-events-none" />
       <p class="text-[17px] text-neutral font-[700] leading-[1.4] uppercase mb-[6px]">
         До конца специального предложения осталось:
       </p>
       <p class="text-[22px] text-[#fff] font-[700] leading-[1.5] mb-[24px]">
-        2 дн.: 13 ч : 09 мин : 05 сек
+        {{time.hours}} год.: {{ time.minutes }} хв.: {{time.seconds}} сек.
       </p>
       <p class="text-[28px] text-[#fff] font-[700] leading-[1.5] mb-[2px]">
         Остались сомнения?
@@ -159,9 +160,12 @@
       <p class="text-[18px] text-neutral leading-[1.5] mb-[24px]">
         Узнайте, насколько эта сфера вам подходит, и сделайте первый шаг к успешной карьере в тендерах.
       </p>
-      <button class="text-primary text-[16px] font-[700] leading-normal uppercase px-[24px] py-[16px] rounded-[100px] bg-[#FAFBFF] w-fit">
+      <router-link
+        to="/start"
+        class="text-primary block text-[16px] font-[700] leading-normal uppercase px-[24px] py-[16px] rounded-[100px] bg-[#FAFBFF] w-fit"
+      >
         Пройти тест
-      </button>
+      </router-link>
       <img src="@/assets/images/gift.png" class="absolute bottom-[-90px] right-0 w-[230px]"/>
     </div>
   </section>
@@ -195,10 +199,6 @@
         <p class="text-neutral leading-[1.3] text-[15px] mb-[24px]">
           Мы ищем энергичного и целеустремленного специалиста по тендерам, готового начать карьеру в динамичной и перспективной сфере.
         </p>
-        <a href="#" class="flex items-center gap-[10px] text-[18px] font-[700] leading-normal underline text-[#fff]">
-          Посмотреть детали
-          <i-svg name="arrow" />
-        </a>
       </div>
       <div class="border-[1px] border-[#323B54] rounded-[16px] bg-[#27293A] px-[20px] py-[32px] flex flex-col items-start min-h-[230px] gap-[12px]">
         <h2 class="text-[21px] font-[700] text-[#F3F3F3] mb-[24px]">Тендерный специалист (удаленно)</h2>
@@ -209,10 +209,6 @@
         <p class="text-neutral leading-[1.3] text-[15px] mb-[24px]">
           Мы ищем энергичного и целеустремленного специалиста по тендерам, готового начать карьеру в динамичной и перспективной сфере.
         </p>
-        <a href="#" class="flex items-center gap-[10px] text-[18px] font-[700] leading-normal underline text-[#fff]">
-          Посмотреть детали
-          <i-svg name="arrow" />
-        </a>
       </div>
       <div class="border-[1px] border-[#323B54] rounded-[16px] bg-[#27293A] px-[20px] py-[32px] flex flex-col items-start min-h-[230px] gap-[12px]">
         <h2 class="text-[21px] font-[700] text-[#F3F3F3] mb-[24px]">Младший специалист по тендерам (без опыта)</h2>
@@ -223,15 +219,13 @@
         <p class="text-neutral leading-[1.3] text-[15px] mb-[24px]">
           Приглашаем на работу младшего специалиста по тендерам. Ваша задача — стать частью команды и пройти обучение для развития в области тендерных закупок.
         </p>
-        <a href="#" class="flex items-center gap-[10px] text-[18px] font-[700] leading-normal underline text-[#fff]">
-          Посмотреть детали
-          <i-svg name="arrow" />
-        </a>
       </div>
     </div>
-    <base-button class="py-[18px] w-full">
-      Посмотреть все вакансии
-    </base-button>
+    <a href="https://www.work.ua/jobs-%D0%BF%D1%83%D0%B1%D0%BB%D1%96%D1%87%D0%BD%D0%B8%D1%85+%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D1%96%D0%B2%D0%B5%D0%BB%D1%8C/" target="_blank">
+      <base-button class="py-[18px] w-full">
+        Посмотреть все вакансии
+      </base-button>
+    </a>
   </section>
   <section class="relative z-[2] py-[80px] bg-[#F4F5FB] px-[20px]">
     <h2 class="text-[32px] font-[700] text-[#2E2F5B] mb-[40px] leading-[1.3]">
@@ -264,6 +258,7 @@
     <base-button
         variant="rounded"
         class="w-full py-[16px] mt-[40px]"
+        @click="openPayCheckout"
     >
       Вступити на курс
     </base-button>
@@ -313,6 +308,7 @@
     <base-button
         variant="rounded"
         class="w-full py-[16px] mt-[40px]"
+        @click="openPayCheckout"
     >
       Вступити на курс
     </base-button>
@@ -353,7 +349,7 @@
         </collapse>
       </div>
     </div>
-    <base-button variant="rounded" class="w-fit gap-[14px] mx-auto flex items-center justify-center pr-[8px]">
+    <base-button variant="rounded" class="w-fit gap-[14px] mx-auto flex items-center justify-center pr-[8px]" @click="openPayCheckout">
         <span class="flex-1">
           Записатись на курс
         </span>
@@ -400,7 +396,7 @@
       Если вы хотите узнать больше о тендерах или нуждаетесь в консультации по их организации, оставьте заявку — и мы свяжемся с вами.
     </p>
 
-    <form class="px-[20px] bg-primary py-[40px] rounded-[12px] flex flex-col gap-[18px]">
+    <form id="supportForm" class="px-[20px] bg-primary py-[40px] rounded-[12px] flex flex-col gap-[18px]">
       <label>
         <h3 class="text-[18px] font-[500] text-[#EBEBF4] mb-[2px]">Почта</h3>
         <p class="text-[13px] font-[500] leading-[1.2] text-neutral mb-[8px]">Так мы с вами свяжемся.</p>
@@ -435,9 +431,9 @@ import {useCollapse} from "@/composables/useCollapse.js";
 import TheHeader from "@/components/TheHeader.vue";
 import TheFooter from "@/components/TheFooter.vue";
 import {usePopups} from "@/composables/usePopups.js";
-import { BASIC_PLAN } from '@/common/price-configs/index'
-import {computed} from "vue";
 import {useQuiz} from "@/composables/useQuiz.js";
+import { useCountdown } from '@/composables/useCountdown.js'
+import { usePlansSettings } from '@/composables/usePlansSettings.js'
 const questions = [
   {
     id: 1,
@@ -470,14 +466,17 @@ const questions = [
     answers: 'Мы предоставляем всестороннюю поддержку. Вы можете задавать вопросы преподавателям в чате Telegram и участвовать в обсуждениях на форуме внутри курса. Если у вас уже есть вопросы по курсу, задайте их, и мы оперативно ответим.'
   }
 ]
+const { time, startTimer, stopTimer } = useCountdown({key: 'prize_timer', count: 86400});
+
+startTimer()
 
 const { usersData } = useQuiz();
 const { collapseItems, setCollapsed } = useCollapse(questions)
 const { openCheckout } = usePopups();
-
-const priceSettings = computed(() => {
-  return BASIC_PLAN
-})
+const { priceSettings } = usePlansSettings();
+const openPayCheckout = () => {
+  openCheckout({price: priceSettings.value})
+}
 </script>
 
 <style scoped>

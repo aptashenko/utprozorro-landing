@@ -6,13 +6,26 @@
     <div class="flex-1">
       <div class="relative pb-[100px]">
         <transition name="slide-left" mode="out-in">
-          <img v-show="reviewIdx >= 1" src="@/assets/images/quiz/reviews/review1.png" class="w-[314px]" />
+          <review-message v-show="reviewIdx >= 1" name="Анна" class="max-w-[314px]">
+          <span>
+            «Курс допоміг мені <span class="text-[#5754FF]">швидко освоїти</span> всі аспекти роботи з тендерами. <span class="text-[#5754FF]">Вже отримала кілька пропозицій!</span> 👍»
+          </span>
+          </review-message>
         </transition>
         <transition name="slide-right" mode="out-in">
-          <img v-show="reviewIdx >= 2" src="@/assets/images/quiz/reviews/review2.png" class="w-[257px] absolute bottom-0 right-[-10px]" />
+          <review-message
+            v-show="reviewIdx >= 2"
+            name="Дмитро"
+            shadow
+            class="absolute bottom-0 right-0 max-w-[234px]"
+          >
+          <span>
+            «Курс відкрив для мене <span class="text-[#5754FF]">нові кар'єрні можливості</span>. Працюю тендерним спеціалістом в ІТ-компанії»
+          </span>
+          </review-message>
         </transition>
       </div>
-      <div class="mx-auto">
+      <div class="mx-auto my-[10px]">
         <div class="bg-[#54468A] blur-[100px] w-[174px] h-[174px] absolute-center-x absolute-center-y z-[-1]" />
         <img
             src="@/assets/images/rating.png"
@@ -22,10 +35,28 @@
       </div>
       <div class="relative pb-[85px]">
         <transition name="slide-left" mode="out-in">
-          <img v-show="reviewIdx >= 3" src="@/assets/images/quiz/reviews/review3.png" class="w-[224px] relative left-[-10px]" />
+          <review-message
+            v-show="reviewIdx >= 3"
+            name="Олена"
+            shadow
+            class="w-[224px] relative left-0"
+          >
+          <span>
+            «Відмінне навчання!  <span class="text-[#5754FF]">Багато практики та корисних порад.</span> Впевнений у своїх силах»
+          </span>
+          </review-message>
         </transition>
         <transition name="slide-right" mode="out-in">
-          <img v-show="reviewIdx >= 4" src="@/assets/images/quiz/reviews/review4.png" class="w-[252px] absolute bottom-0 right-[-10px]" />
+          <review-message
+            v-show="reviewIdx >= 4"
+            name="Максим"
+            shadow
+            class="w-[252px] absolute bottom-0 right-[-10px]"
+          >
+          <span>
+            «Дуже задоволена курсом. Все <span class="text-[#5754FF]">зрозуміло та доступно.</span> Працюю тендерним спеціалістом <span class="text-[#5754FF]">у великій компанії</span>🚀»
+          </span>
+          </review-message>
         </transition>
       </div>
     </div>
@@ -46,6 +77,7 @@ import {ref} from "vue";
 import iterateWithDelay from "@/utils/iterate-with-delay.js";
 import BaseButton from "@/components/ui/BaseButton.vue";
 import {useQuiz} from "@/composables/useQuiz.js";
+import ReviewMessage from '@/components/quiz/reviews-elements/ReviewMessage.vue'
 
 const steps = [1,2,3,4,5,6];
 const reviewIdx = ref(0);

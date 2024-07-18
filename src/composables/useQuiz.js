@@ -113,8 +113,12 @@ const questions = reactive({
 export function useQuiz() {
     const router = useRouter();
 
+    const onlyQuestions = computed(() => {
+        const values = Object.values(questions);
+        return values.filter(value => value.component === 'question');
+    })
     const questionId = computed(() => Number(router.currentRoute.value.params.id));
-    const questionsLength = computed(() => Object.keys(questions).length)
+
     const currentQuestion = computed(() => questions[questionId.value]);
     const nextQuestionPath = computed(() => {
         const nextId = questionId.value + 1;
@@ -132,7 +136,10 @@ export function useQuiz() {
         return nextPageExist ? {name: 'quiz', params: {id: prevId}} : null
     })
 
-    const quizProgress = computed(() => (questionId.value / questionsLength.value) * 100)
+    const questionCount = computed(() => onlyQuestions.value.findIndex(item => item.question === currentQuestion.value.question) + 1)
+
+
+    const quizProgress = computed(() => (questionCount.value / onlyQuestions.value.length) * 100)
     const setAnswer = answer => {
         usersData.answers[questionId.value] = answer;
         questions[questionId.value].answer = answer;
@@ -157,7 +164,6 @@ export function useQuiz() {
         currentQuestion,
         questionId,
         nextPage,
-        questionsLength,
         nextQuestionPath,
         prevQuestionPath,
         disableAnswerButton,
@@ -165,6 +171,8 @@ export function useQuiz() {
         lastQuestionRedirect,
         questions,
         usersData,
+        onlyQuestions,
+        questionCount,
         setPromoCode
     }
 }

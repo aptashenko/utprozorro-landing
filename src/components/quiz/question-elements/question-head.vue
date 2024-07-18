@@ -5,7 +5,7 @@
     </base-button>
     <div>
       <p class="text-[14px] text-[#fff] font-[600] leading-[1.2]">
-        Вопрос {{questionId}} из {{questionsLength}}
+        Вопрос {{questionCount}} из {{onlyQuestions.length}}
       </p>
     </div>
   </div>
@@ -15,5 +15,6 @@
 import {useQuiz} from "@/composables/useQuiz.js";
 import ISvg from "@/components/shared/ISvg.vue";
 import BaseButton from "@/components/ui/BaseButton.vue";
-const { questionId, questionsLength, prevQuestionPath } = useQuiz();
+const { questionCount, onlyQuestions, prevQuestionPath } = useQuiz();
+
 </script>
