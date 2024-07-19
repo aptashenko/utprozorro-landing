@@ -1,7 +1,7 @@
 <template>
   <div class="px-[20px] py-[40px]">
     <h2 class="text-[#C7D2FF] text-center text-[16px] font-[600] leading-[1.2] mb-[26px]">
-      Получите полные знания о тендерах<br>на UTPROZORRO и сделайте шаг к<br>успешной карьере
+      Отримайте повні знання про тендери<br>на UTPROZORRO та зробіть крок до<br>успішної кар'єри
     </h2>
     <div>
       <transition name="slide-left" mode="out-in">
@@ -29,7 +29,7 @@
       <transition name="slide-right" mode="out-in">
         <div v-show="minusesList.length" class="relative z-[2] bg-[#4D5280] min-h-[246px] p-[20px] pb-[36px] rounded-[12px] mt-[18px]">
           <h3 class="text-[#D9DEFF] text-[13px] font-[600] leading-[1.2] text-center mb-[16px]">
-            Не проходить курс
+            Не проходити курс
           </h3>
           <transition-group
               tag="ul"
@@ -55,7 +55,7 @@
           class="mt-[18px] w-full"
           :to="nextQuestionPath"
       >
-        Продолжить
+        Продовжити
       </base-button>
     </transition>
   </div>
@@ -74,18 +74,18 @@ const minusesList = ref([]);
 const {nextQuestionPath} = useQuiz()
 
 const pluses = [
-  'Высокий спрос на тендерных специалистов.',
-  'Качественное обучение от экспертов.',
-  'Качественное обучение от экспертов.',
-  'Отличные карьерные перспективы.'
-]
+  'Високий попит на тендерних спеціалістів.',
+  'Якісне навчання від експертів.',
+  'Чудові кар\'єрні перспективи.'
+];
 
 const minuses = [
-  'Упускаете важные карьерные возможности.',
-  'Не понимаете, как работать с тендерами.',
-  'Ограниченное профессиональное развитие.',
-  'Невостребованность на рынке труда.'
-]
+  'Упускаєте важливі кар\'єрні можливості.',
+  'Не розумієте, як працювати з тендерами.',
+  'Обмежений професійний розвиток.',
+  'Невостребованість на ринку праці.'
+];
+
 
 const startPlusesQueue = (value) => {
   plusesList.value.push(value);

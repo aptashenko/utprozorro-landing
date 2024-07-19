@@ -4,10 +4,10 @@
     <div class="px-[20px] pb-[50px]">
       <div class="rounded-[465px] bg-[#2A2A50] blur-[100px] w-full pb-[130%] absolute-center-x top-[-390px] pointer-events-none z-[-1]" />
       <h3 class="text-[17px] font-[600] text-violet leading-[1.3] tracking-[-0.17px] uppercase mb-[20px]">
-        Наше специальное предложение для вас
+        Наша спеціальна пропозиція для вас
       </h3>
       <h2 class="text-[16px] leading-[1.2] text-neutral mb-[6px]">
-        Мы предлагаем вам уникальный онлайн курс
+        Ми пропонуємо унікальний онлайн курс
       </h2>
       <h1 class="text-[36px] font-[700] text-[#fff] leading-[1.2] tracking-[-0.36px] mb-[28px]">
         Станьте експертом з тендерів з нуля!
@@ -19,7 +19,7 @@
         <i-svg name="button-angle" class="flex-shrink-0" />
       </base-button>
       <p class="text-[22px] leading-[1.2] font-[600] text-[#fff] mb-[16px]">
-        Диаграмма ниже показывает, как наш курс улучшит вашу жизнь.
+        Діаграма нижче покаже, як наш курс покращить Ваше життя.
       </p>
       <div class="px-[28px]">
         <img src="@/assets/images/diagram.png" class="w-full mx-auto block" />
@@ -27,41 +27,65 @@
       <div class="flex items-center gap-[6px] mt-[24px]">
         <div class="flex items-center gap-[4px]">
           <span class="bg-[#FC9822] w-[21px] h-[9px] rounded-[20px]" />
-          <p class="text-[#C7D2FF] text-[12px] font-[500] leading-[23px]">До курса</p>
+          <p class="text-[#C7D2FF] text-[12px] font-[500] leading-[23px]">до курсу</p>
         </div>
         <div class="flex items-center gap-[4px]">
           <span class="bg-[#2276FC] w-[21px] h-[9px] rounded-[20px]" />
-          <p class="text-[#C7D2FF] text-[12px] font-[500] leading-[23px]">После курса</p>
+          <p class="text-[#C7D2FF] text-[12px] font-[500] leading-[23px]">після курса</p>
         </div>
       </div>
       <div class="mt-[30px] flex flex-col gap-[12px]">
         <div>
-          <h3 class="mb-[2px] text-[#C7D2FF] leading-[1.2] text-[15px] font-[600]">A. Финансовая стабильность:</h3>
-          <p class="text-[#fff] text-[18px] leading-[1.2] font-[600]">Возрастает с 40% до 85%</p>
+          <h3 class="mb-[2px] text-[#C7D2FF] leading-[1.2] text-[15px] font-[600]">
+            A. Фінансова стабільність:
+          </h3>
+          <p class="text-[#fff] text-[18px] leading-[1.2] font-[600]">
+            Підвищується з 40% до 85%
+          </p>
         </div>
         <div>
-          <h3 class="mb-[2px] text-[#C7D2FF] leading-[1.2] text-[15px] font-[600]">B. Профессиональные навыки:</h3>
-          <p class="text-[#fff] text-[18px] leading-[1.2] font-[600]">Возрастает с 30% до 90%</p>
+          <h3 class="mb-[2px] text-[#C7D2FF] leading-[1.2] text-[15px] font-[600]">
+            B. Професійні навички:
+          </h3>
+          <p class="text-[#fff] text-[18px] leading-[1.2] font-[600]">
+            Зростає з 30% до 90%
+          </p>
         </div>
         <div>
-          <h3 class="mb-[2px] text-[#C7D2FF] leading-[1.2] text-[15px] font-[600]">C. Возможности для карьерного роста:</h3>
-          <p class="text-[#fff] text-[18px] leading-[1.2] font-[600]">Возрастает с 25% до 80%</p>
+          <h3 class="mb-[2px] text-[#C7D2FF] leading-[1.2] text-[15px] font-[600]">
+            C. Можливості для кар'єрного зросту:
+          </h3>
+          <p class="text-[#fff] text-[18px] leading-[1.2] font-[600]">
+            Зростає з 25% до 80%
+          </p>
         </div>
         <div>
-          <h3 class="mb-[2px] text-[#C7D2FF] leading-[1.2] text-[15px] font-[600]">D. Уверенность в себе:</h3>
-          <p class="text-[#fff] text-[18px] leading-[1.2] font-[600]">Возрастает с 50% до 95%</p>
+          <h3 class="mb-[2px] text-[#C7D2FF] leading-[1.2] text-[15px] font-[600]">
+            D. Впевненність в собі:
+          </h3>
+          <p class="text-[#fff] text-[18px] leading-[1.2] font-[600]">
+            Зростає з 50% до 95%
+          </p>
         </div>
         <div>
-          <h3 class="mb-[2px] text-[#C7D2FF] leading-[1.2] text-[15px] font-[600]">E. Рабочие связи и нетворкинг:</h3>
-          <p class="text-[#fff] text-[18px] leading-[1.2] font-[600]">Возрастает с 35% до 75%</p>
+          <h3 class="mb-[2px] text-[#C7D2FF] leading-[1.2] text-[15px] font-[600]">
+            E. Робочі зв'язки та нетворкінг:
+          </h3>
+          <p class="text-[#fff] text-[18px] leading-[1.2] font-[600]">
+            Зростає з 35% до 75%
+          </p>
         </div>
         <div>
-          <h3 class="mb-[2px] text-[#C7D2FF] leading-[1.2] text-[15px] font-[600]">F. Рабочая гибкость и свободное время:</h3>
-          <p class="text-[#fff] text-[18px] leading-[1.2] font-[600]">Возрастает с 20% до 70%</p>
+          <h3 class="mb-[2px] text-[#C7D2FF] leading-[1.2] text-[15px] font-[600]">
+            F. Робоча гнучкість та вільний час:
+          </h3>
+          <p class="text-[#fff] text-[18px] leading-[1.2] font-[600]">
+            Зростає з 20% до 70%
+          </p>
         </div>
       </div>
       <p class="text-[#C7D2FF] leading-[1.2] text-[18px] font-[600] mt-[24px]">
-        Из диаграммы видно, что наш курс обеспечит вам финансовую стабильность, карьерный рост, уверенность и гибкость, улучшая все аспекты вашей жизни.
+        З діаграми видно, що наш курс забезпечить вам фінансову стабільність, кар'єрний ріст, впевненість та гнучкість, покращуючи всі аспекти вашого життя.
       </p>
       <base-button variant="rounded" class="w-full mt-[24px] flex items-center justify-center pr-[8px] mb-[31px]" @click="openPayCheckout">
         <span class="flex-1">
@@ -122,23 +146,23 @@
   </section>
   <section class="relative px-[20px] pt-[80px] pb-[40px] overflow-hidden">
     <div class="rounded-[420px] bg-[#2A2A50] blur-[100px] w-full pb-[100%] absolute left-[-100px] top-[-200px] pointer-events-none z-[-1]" />
-    <h2 class="font-[700] leading-[1.4] text-[32px] text-[#fff] mb-[40px]">Наш курс подойдет тем, кто:</h2>
+    <h2 class="font-[700] leading-[1.4] text-[32px] text-[#fff] mb-[40px]">Наш курс підходить тим, хто:</h2>
     <div class="flex flex-col gap-[16px]">
       <div class="border-[1px] border-[#323B54] rounded-[16px] bg-[#27293A] px-[20px] py-[25px] flex flex-col items-start justify-end min-h-[230px] gap-[12px]">
-        <h2 class="text-[21px] font-[700] text-[#F3F3F3]">Ищет новую профессию</h2>
-        <p class="text-neutral leading-[1.3] text-[15px]">Освойте востребованную профессию и начните зарабатывать на тендерах уже через несколько месяцев.</p>
+        <h2 class="text-[21px] font-[700] text-[#F3F3F3]">Шукає нову професію</h2>
+        <p class="text-neutral leading-[1.3] text-[15px]">Опануйте затребувану професію та почніть заробляти на тендерах вже за кілька місяців.</p>
       </div>
       <div class="border-[1px] border-[#323B54] rounded-[16px] bg-[#27293A] px-[20px] py-[25px] flex flex-col items-start justify-end min-h-[230px] gap-[12px]">
-        <h2 class="text-[21px] font-[700] text-[#F3F3F3]">Хочет увеличить доход</h2>
-        <p class="text-neutral leading-[1.3] text-[15px]">Научитесь выигрывать тендеры и обеспечьте стабильный поток заказов для вашего бизнеса.</p>
+        <h2 class="text-[21px] font-[700] text-[#F3F3F3]">Бажає збільшити дохід</h2>
+        <p class="text-neutral leading-[1.3] text-[15px]">Навчіться вигравати тендери та забезпечте стабільний потік замовлень для вашого бізнесу.</p>
       </div>
       <div class="border-[1px] border-[#323B54] rounded-[16px] bg-[#27293A] px-[20px] py-[25px] flex flex-col items-start justify-end min-h-[230px] gap-[12px]">
-        <h2 class="text-[21px] font-[700] text-[#F3F3F3]">Стремится к профессиональному росту</h2>
-        <p class="text-neutral leading-[1.3] text-[15px]">Развивайте навыки управления тендерами и поднимайтесь по карьерной лестнице.</p>
+        <h2 class="text-[21px] font-[700] text-[#F3F3F3]">Прагне професійного зростання</h2>
+        <p class="text-neutral leading-[1.3] text-[15px]">Розвивайте навички управління тендерами та піднімайтесь кар'єрними сходами.</p>
       </div>
       <div class="border-[1px] border-[#323B54] rounded-[16px] bg-[#27293A] px-[20px] py-[25px] flex flex-col items-start justify-end min-h-[230px] gap-[12px]">
-        <h2 class="text-[21px] font-[700] text-[#F3F3F3]">Бизнесмены и предприниматели</h2>
-        <p class="text-neutral leading-[1.3] text-[15px]">Узнайте, как успешно участвовать в государственных и коммерческих тендерах и расширьте возможности вашего бизнеса.</p>
+        <h2 class="text-[21px] font-[700] text-[#F3F3F3]">Бізнесмени та підприємці</h2>
+        <p class="text-neutral leading-[1.3] text-[15px]">Дізнайтеся, як успішно брати участь у державних та комерційних тендерах і розширюйте можливості вашого бізнесу.</p>
       </div>
     </div>
   </section>
@@ -146,19 +170,19 @@
     <div class="relative z-[2] bg-gift px-[20px] pt-[40px] pb-[120px]">
       <div class="absolute w-full h-full top-0 left-0 right-0 bottom-0 bg-[url('@/assets/images/gift-bg.png')] bg-cover z-[-1] pointer-events-none" />
       <p class="text-[17px] text-neutral font-[700] leading-[1.4] uppercase mb-[6px]">
-        До конца специального предложения осталось:
+        До кінця спеціальної пропозиції залишилось
       </p>
       <p class="text-[22px] text-[#fff] font-[700] leading-[1.5] mb-[24px]">
         {{time.hours}} год.: {{ time.minutes }} хв.: {{time.seconds}} сек.
       </p>
       <p class="text-[28px] text-[#fff] font-[700] leading-[1.5] mb-[2px]">
-        Остались сомнения?
+        Залишились сумніви?
       </p>
       <p class="text-[34px] text-[#fff] font-[700] leading-[1.5] mb-[12px]">
-        Пройдите бесплатный тест!
+        Пройдіть безкоштовний тест!
       </p>
       <p class="text-[18px] text-neutral leading-[1.5] mb-[24px]">
-        Узнайте, насколько эта сфера вам подходит, и сделайте первый шаг к успешной карьере в тендерах.
+        Дізнайтеся, наскільки ця сфера вам підходить, і зробіть перший крок до успішної кар'єри в тендерах.
       </p>
       <router-link
         to="/start"
@@ -172,7 +196,7 @@
   <section class="relative pt-[80px] pb-[40px] px-[20px]">
     <div class="rounded-[420px] bg-[#2A2A50] blur-[100px] w-full pb-[100%] absolute left-[-100px] top-[-200px] pointer-events-none z-[-1]" />
     <h2 class="text-neutral text-[24px] font-[600] leading-normal mb-[12px]">
-      Средняя зарплата специалиста по тендерам в Украине
+      Середня зарплата спеціаліста з публічних закупівель
     </h2>
     <p class="text-[46px] font-[700] leading-normal text-[#fff] mb-[40px]">
       27 000 ₴
@@ -181,77 +205,77 @@
       >29 617
     </p>
     <p class="text-neutral text-[24px] font-[600] leading-normal mb-[40px]">
-      вакансий по профессии специалист по тендера
+      середня кількість вакансій за рік
     </p>
     <p class="text-[46px] font-[700] leading-normal text-[#fff] mb-[12px]">
       342
     </p>
     <p class="text-neutral text-[24px] font-[600] leading-normal mb-[40px]">
-      студента уже трудоустроено
+      студенти вже працевлаштовано
     </p>
     <div class="flex flex-col gap-[16px] mb-[40px]">
       <div class="border-[1px] border-[#323B54] rounded-[16px] bg-[#27293A] px-[20px] py-[32px] flex flex-col items-start min-h-[230px] gap-[12px]">
-        <h2 class="text-[21px] font-[700] text-[#F3F3F3] mb-[24px]">Специалист по тендерам</h2>
+        <h2 class="text-[21px] font-[700] text-[#F3F3F3] mb-[24px]">Спеціаліст із публічних закупівель</h2>
         <div class="flex items-center gap-[6px] mb-[16px]">
-          <span class="bg-[#C4C4FF] rounded-[8px] py-[6px] px-[10px] text-primary text-[16px] font-[600] leading-normal ">Можно удаленно</span>
-          <span class="bg-[#C4C4FF] rounded-[8px] py-[6px] px-[10px] text-primary text-[16px] font-[600] leading-normal ">Без опыта</span>
+          <span class="bg-[#C4C4FF] rounded-[8px] py-[6px] px-[10px] text-primary text-[14px] font-[600] leading-normal ">Можна віддалено</span>
+          <span class="bg-[#C4C4FF] rounded-[8px] py-[6px] px-[10px] text-primary text-[14px] font-[600] leading-normal ">Без досвіду</span>
         </div>
         <p class="text-neutral leading-[1.3] text-[15px] mb-[24px]">
-          Мы ищем энергичного и целеустремленного специалиста по тендерам, готового начать карьеру в динамичной и перспективной сфере.
+          Ми шукаємо енергійного та цілеспрямованого спеціаліста по тендерам, готового розпочати кар'єру в динамічній та перспективній сфері.
         </p>
       </div>
       <div class="border-[1px] border-[#323B54] rounded-[16px] bg-[#27293A] px-[20px] py-[32px] flex flex-col items-start min-h-[230px] gap-[12px]">
-        <h2 class="text-[21px] font-[700] text-[#F3F3F3] mb-[24px]">Тендерный специалист (удаленно)</h2>
+        <h2 class="text-[21px] font-[700] text-[#F3F3F3] mb-[24px]">Тендерний спеціаліст (віддалено)</h2>
         <div class="flex items-center gap-[6px] mb-[16px]">
-          <span class="bg-[#C4C4FF] rounded-[8px] py-[6px] px-[10px] text-primary text-[16px] font-[600] leading-normal ">Удаленно</span>
-          <span class="bg-[#C4C4FF] rounded-[8px] py-[6px] px-[10px] text-primary text-[16px] font-[600] leading-normal ">Опыт 1-3 года</span>
+          <span class="bg-[#C4C4FF] rounded-[8px] py-[6px] px-[10px] text-primary text-[14px] font-[600] leading-normal ">Віддалено</span>
+          <span class="bg-[#C4C4FF] rounded-[8px] py-[6px] px-[10px] text-primary text-[14px] font-[600] leading-normal ">Досвід 1-3 роки</span>
         </div>
         <p class="text-neutral leading-[1.3] text-[15px] mb-[24px]">
-          Мы ищем энергичного и целеустремленного специалиста по тендерам, готового начать карьеру в динамичной и перспективной сфере.
+          Ми шукаємо енергійного та цілеспрямованого спеціаліста по тендерам, готового розпочати кар'єру в динамічній та перспективній сфері.
         </p>
       </div>
       <div class="border-[1px] border-[#323B54] rounded-[16px] bg-[#27293A] px-[20px] py-[32px] flex flex-col items-start min-h-[230px] gap-[12px]">
-        <h2 class="text-[21px] font-[700] text-[#F3F3F3] mb-[24px]">Младший специалист по тендерам (без опыта)</h2>
+        <h2 class="text-[21px] font-[700] text-[#F3F3F3] mb-[24px]">Молодший спеціаліст по тендерам (без досвіду)</h2>
         <div class="flex items-center gap-[6px] mb-[16px]">
-          <span class="bg-[#C4C4FF] rounded-[8px] py-[6px] px-[10px] text-primary text-[16px] font-[600] leading-normal ">Можно удаленно</span>
-          <span class="bg-[#C4C4FF] rounded-[8px] py-[6px] px-[10px] text-primary text-[16px] font-[600] leading-normal ">Без опыта</span>
+          <span class="bg-[#C4C4FF] rounded-[8px] py-[6px] px-[10px] text-primary text-[14px] font-[600] leading-normal ">Можна віддалено</span>
+          <span class="bg-[#C4C4FF] rounded-[8px] py-[6px] px-[10px] text-primary text-[14px] font-[600] leading-normal ">Без досвіду</span>
         </div>
         <p class="text-neutral leading-[1.3] text-[15px] mb-[24px]">
-          Приглашаем на работу младшего специалиста по тендерам. Ваша задача — стать частью команды и пройти обучение для развития в области тендерных закупок.
+          Запрошуємо на роботу молодшого спеціаліста по тендерам. Ваше завдання — стати частиною команди та пройти навчання для розвитку у сфері тендерних закупівель.
         </p>
       </div>
     </div>
     <a href="https://www.work.ua/jobs-%D0%BF%D1%83%D0%B1%D0%BB%D1%96%D1%87%D0%BD%D0%B8%D1%85+%D0%B7%D0%B0%D0%BA%D1%83%D0%BF%D1%96%D0%B2%D0%B5%D0%BB%D1%8C/" target="_blank">
       <base-button class="py-[18px] w-full">
-        Посмотреть все вакансии
+        Продивитись всі вакансії
       </base-button>
     </a>
   </section>
   <section class="relative z-[2] py-[80px] bg-[#F4F5FB] px-[20px]">
     <h2 class="text-[32px] font-[700] text-[#2E2F5B] mb-[40px] leading-[1.3]">
-      Чему вы научитесь:
+      Чому ви навчитесь:
     </h2>
     <div class="flex items-center">
       <div class="relative flex flex-col gap-[40px] pl-[40px] numeric-dot-line">
         <div class="relative flex flex-col gap-[8px] numeric-dot before:content-['1']">
-          <h3 class="text-[#2E2F5B] text-[22px] font-[700] leading-[1.2]">Основы тендерного процесса</h3>
-          <p class="text-[#3C445E] text-[15px] font-[500] leading-[1.2]">Изучение законодательной базы, типов тендеров и ключевых этапов.</p>
+          <h3 class="text-[#2E2F5B] text-[22px] font-[700] leading-[1.2]">Основи тендерного процесу</h3>
+          <p class="text-[#3C445E] text-[15px] font-[500] leading-[1.2]">Вивчення законодавчої бази, типів тендерів і ключових етапів.</p>
         </div>
         <div class="relative flex flex-col gap-[8px] numeric-dot before:content-['2']">
-          <h3 class="text-[#2E2F5B] text-[22px] font-[700] leading-[1.2]">Подготовка тендерных предложений</h3>
-          <p class="text-[#3C445E] text-[15px] font-[500] leading-[1.2]">Практические навыки подготовки документов, коммерческих предложений и расчетов.</p>
+          <h3 class="text-[#2E2F5B] text-[22px] font-[700] leading-[1.2]">Підготовка тендерних пропозицій</h3>
+          <p class="text-[#3C445E] text-[15px] font-[500] leading-[1.2]">Практичні навички підготовки документів, комерційних пропозицій і розрахунків.</p>
         </div>
         <div class="relative flex flex-col gap-[8px] numeric-dot before:content-['3']">
-          <h3 class="text-[#2E2F5B] text-[22px] font-[700] leading-[1.2]">Анализ и оценка тендерных заявок</h3>
-          <p class="text-[#3C445E] text-[15px] font-[500] leading-[1.2]">Методы оценки конкурентных предложений, критерии выбора победителя.</p>
+          <h3 class="text-[#2E2F5B] text-[22px] font-[700] leading-[1.2]">Аналіз та оцінка тендерних заявок</h3>
+          <p class="text-[#3C445E] text-[15px] font-[500] leading-[1.2]">Методи оцінки конкурентних пропозицій, критерії вибору переможця.</p>
         </div>
         <div class="relative flex flex-col gap-[8px] numeric-dot before:content-['4']">
-          <h3 class="text-[#2E2F5B] text-[22px] font-[700] leading-[1.2]">Стратегии участия в тендерах</h3>
-          <p class="text-[#3C445E] text-[15px] font-[500] leading-[1.2]">Тактики повышения шансов на победу, изучение кейсов успешного участия в тендерах.</p>
+          <h3 class="text-[#2E2F5B] text-[22px] font-[700] leading-[1.2]">Стратегії участі в тендерах</h3>
+          <p class="text-[#3C445E] text-[15px] font-[500] leading-[1.2]">Тактики підвищення шансів на перемогу, вивчення кейсів успішної участі в тендерах.</p>
         </div>
         <div class="relative flex flex-col gap-[8px] numeric-dot before:content-['5']">
-          <h3 class="text-[#2E2F5B] text-[22px] font-[700] leading-[1.2]">Практика и кейсы</h3>
-          <p class="text-[#3C445E] text-[15px] font-[500] leading-[1.2]">Разбор реальных примеров, симуляция тендерного процесса.</p>
+          <h3 class="text-[#2E2F5B] text-[22px] font-[700] leading-[1.2]">Практика та кейси</h3>
+          <p class="text-[#3C445E] text-[15px] font-[500] leading-[1.2]">Розбір реальних прикладів, симуляція тендерного процесу.</p>
         </div>
       </div>
     </div>
@@ -266,42 +290,37 @@
   </section>
   <section class="px-[20px] bg-primary py-[80px]">
     <h2 class="text-[32px] font-[700] text-[#fff] mb-[40px] leading-[1.2]">
-      Наши преимущества перед другими
+      Наші переваги перед іншими
     </h2>
     <div class="flex flex-col gap-[16px] max-w-[335px] mx-auto">
-      <div class="relative z-[2] overflow-hidden border-[1px] border-[#323B54] rounded-[16px] bg-[#27293A] px-[20px] pt-[160px] pb-[32px] flex flex-col items-start min-h-[230px] gap-[12px]">
-        <img src="@/assets/images/calendar.png" class="w-[200px] absolute right-0 top-0 z-[-1]" />
-        <h2 class="text-[21px] font-[700] text-[#F3F3F3]">Удобный онлайн формат</h2>
+      <div class="relative z-[2] overflow-hidden border-[1px] border-[#323B54] rounded-[16px] bg-[#27293A] px-[20px] pt-[32px] pb-[32px] flex flex-col items-start min-h-[230px] gap-[12px]">
+        <h2 class="text-[21px] font-[700] text-[#F3F3F3]">Зручний онлайн формат</h2>
         <p class="text-neutral leading-[1.3] text-[15px]">
-          Учитесь в любое время и в любом месте на нашей удобной платформе.
+          Навчайтеся у будь-який час і в будь-якому місці на нашій зручній платформі.
         </p>
       </div>
-      <div class="relative z-[2] overflow-hidden border-[1px] border-[#323B54] rounded-[16px] bg-[#27293A] px-[20px] pt-[180px] pb-[32px] flex flex-col items-start min-h-[230px] gap-[12px]">
-        <img src="@/assets/images/telegram.png" class="w-[88%] absolute right-0 top-[20px] z-[-1]" />
-        <h2 class="text-[21px] font-[700] text-[#F3F3F3]">Доступ к закрытому сообществу в Telegram</h2>
+      <div class="relative z-[2] overflow-hidden border-[1px] border-[#323B54] rounded-[16px] bg-[#27293A] px-[20px] pt-[32px] pb-[32px] flex flex-col items-start min-h-[230px] gap-[12px]">
+        <h2 class="text-[21px] font-[700] text-[#F3F3F3]">Доступ до закритого співтовариства в Telegram</h2>
         <p class="text-neutral leading-[1.3] text-[15px]">
-          Получайте поддержку, советы и рекомендации от опытных специалистов.
+          Отримуйте підтримку, поради та рекомендації від досвідчених фахівців.
         </p>
       </div>
-      <div class="relative z-[2] overflow-hidden border-[1px] border-[#323B54] rounded-[16px] bg-[#27293A] px-[20px] pt-[150px] pb-[32px] flex flex-col items-start min-h-[230px] gap-[12px]">
-        <img src="@/assets/images/work.png" class="w-[80%] absolute right-0 top-0 z-[-1]" />
-        <h2 class="text-[21px] font-[700] text-[#F3F3F3]">Платформа для поиска работы</h2>
+      <div class="relative z-[2] overflow-hidden border-[1px] border-[#323B54] rounded-[16px] bg-[#27293A] px-[20px] pt-[32px] pb-[32px] flex flex-col items-start min-h-[230px] gap-[12px]">
+        <h2 class="text-[21px] font-[700] text-[#F3F3F3]">Платформа для пошуку роботи</h2>
         <p class="text-neutral leading-[1.3] text-[15px]">
-          Найдите работу прямо на нашей платформе и начните применять полученные знания на практике.
+          Знайдіть роботу прямо на нашій платформі та почніть застосовувати отримані знання на практиці.
         </p>
       </div>
-      <div class="relative z-[2] overflow-hidden border-[1px] border-[#323B54] rounded-[16px] bg-[#27293A] px-[20px] pt-[170px] pb-[32px] flex flex-col items-start min-h-[230px] gap-[12px]">
-        <img src="@/assets/images/messages.png" class="w-[95%] absolute left-[10px] top-0 z-[-1]" />
-        <h2 class="text-[21px] font-[700] text-[#F3F3F3]">Форум внутри курса</h2>
+      <div class="relative z-[2] overflow-hidden border-[1px] border-[#323B54] rounded-[16px] bg-[#27293A] px-[20px] pt-[32px] pb-[32px] flex flex-col items-start min-h-[230px] gap-[12px]">
+        <h2 class="text-[21px] font-[700] text-[#F3F3F3]">Форум всередині курсу</h2>
         <p class="text-neutral leading-[1.3] text-[15px]">
-          Обменивайтесь опытом и знаниями с участниками курса, обсуждайте актуальные темы и получайте новые инсайты, которые помогут вам в профессиональном росте.
+          Обмінюйтеся досвідом і знаннями з учасниками курсу, обговорюйте актуальні теми та отримуйте нові інсайти, які допоможуть вам у професійному зростанні.
         </p>
       </div>
-      <div class="relative z-[2] overflow-hidden border-[1px] border-[#323B54] rounded-[16px] bg-[#27293A] px-[20px] pt-[180px] pb-[32px] flex flex-col items-start min-h-[230px] gap-[12px]">
-        <img src="@/assets/images/certificate.png" class="w-[80%] absolute right-0 top-0 z-[-1]" />
-        <h2 class="text-[21px] font-[700] text-[#F3F3F3]">Сертификат об окончании курса</h2>
+      <div class="relative z-[2] overflow-hidden border-[1px] border-[#323B54] rounded-[16px] bg-[#27293A] px-[20px] pt-[32px] pb-[32px] flex flex-col items-start min-h-[230px] gap-[12px]">
+        <h2 class="text-[21px] font-[700] text-[#F3F3F3]">Сертифікат про закінчення курсу</h2>
         <p class="text-neutral leading-[1.3] text-[15px]">
-          Сертификат, подтверждающий знания, поможет выделиться среди конкурентов и повысить шансы на успех в тендерных закупках.
+          Сертифікат, що підтверджує знання, допоможе виділитися серед конкурентів і підвищити шанси на успіх у тендерних закупівлях.
         </p>
       </div>
     </div>
@@ -315,15 +334,15 @@
   </section>
   <section class="relative z-[2] pt-[80px] pb-[106px] bg-[#F4F5FB] px-[20px]">
     <h2 class="text-[32px] font-[700] text-[#2E2F5B] mb-[12px] leading-[1.3]">
-      Часто задаваемые вопросы
+      Часто задавані питання
     </h2>
     <p class="text-[#22233C] text-[15px] leading-[1.2] mb-[12px]">
-      Не нашли ответ на свой вопрос?<br>
-      <span class="font-[700]">Отправьте заявку</span> и мы вам ответим в ближайшее время.
+      Не знайшли відповідь на своє питання?<br>
+      <span class="font-[700]">Надішліть заявку</span> і ми вам відповімо найближчим часом.
     </p>
     <a href="#callback">
       <base-button class="bg-[#EDE9FF] text-[#202430] text-[16px] py-[16px] w-full mb-[40px] font-[700]">
-        Задать вопрос
+        Задати питання
       </base-button>
     </a>
     <div class="flex flex-col gap-[16px] mb-[40px]">
@@ -360,7 +379,7 @@
   <section class="bg-primary py-[80px]">
     <div class="px-[20px]">
       <h2 class="text-[32px] font-[700] text-[#fff] mb-[40px] leading-[1.2]">
-        Отзывы учеников
+        Відгуки студентів
       </h2>
     </div>
     <swiper-container
@@ -390,34 +409,34 @@
   </section>
   <section id="callback" class="relative z-[2] pt-[80px] pb-[106px] bg-[#F4F5FB] px-[20px]">
     <h2 class="text-[32px] font-[700] text-[#2E2F5B] mb-[12px] leading-[1.3]">
-      Поможем решить все вопросы
+      Допоможемо вирішити всі питання
     </h2>
     <p class="text-[15px] leading-[1.2] text-[#22233C] mb-[40px]">
-      Если вы хотите узнать больше о тендерах или нуждаетесь в консультации по их организации, оставьте заявку — и мы свяжемся с вами.
+      Якщо ви хочете дізнатися більше про тендери або потребуєте консультації щодо їх організації, залиште заявку — і ми зв'яжемося з вами.
     </p>
 
     <form id="supportForm" class="px-[20px] bg-primary py-[40px] rounded-[12px] flex flex-col gap-[18px]">
       <label>
-        <h3 class="text-[18px] font-[500] text-[#EBEBF4] mb-[2px]">Почта</h3>
-        <p class="text-[13px] font-[500] leading-[1.2] text-neutral mb-[8px]">Так мы с вами свяжемся.</p>
+        <h3 class="text-[18px] font-[500] text-[#EBEBF4] mb-[2px]">Електронна пошта</h3>
+        <p class="text-[13px] font-[500] leading-[1.2] text-neutral mb-[8px]">Так ми з вами зв'яжемося.</p>
         <input type="email" placeholder="Example@gmail.com" class="bg-[#353A50] py-[18px] px-[20px] w-full rounded-[8px] text-[16px] text-neutral placeholder:text-neutral placeholder:opacity-50" />
       </label>
       <label>
-        <h3 class="text-[18px] font-[500] text-[#EBEBF4] mb-[2px]">Имя</h3>
-        <p class="text-[13px] font-[500] leading-[1.2] text-neutral mb-[8px]">Как мы можем к вам обращаться.</p>
-        <input type="text" placeholder="Иван" class="bg-[#353A50] py-[18px] px-[20px] w-full rounded-[8px] text-[16px] text-neutral placeholder:text-neutral placeholder:opacity-50" />
+        <h3 class="text-[18px] font-[500] text-[#EBEBF4] mb-[2px]">Ім'я</h3>
+        <p class="text-[13px] font-[500] leading-[1.2] text-neutral mb-[8px]">Як ми можемо до вас звертатися.</p>
+        <input type="text" placeholder="Даша" class="bg-[#353A50] py-[18px] px-[20px] w-full rounded-[8px] text-[16px] text-neutral placeholder:text-neutral placeholder:opacity-50" />
       </label>
       <label>
-        <h3 class="text-[18px] font-[500] text-[#EBEBF4] mb-[2px]">Сообщение</h3>
-        <p class="text-[13px] font-[500] leading-[1.2] text-neutral mb-[8px]">Опишите свои вопросы в этом поле, и мы ответим на них. Если вы не знаете, что спросить, оставьте поле пустым, и мы свяжемся с вами для консультации.</p>
+        <h3 class="text-[18px] font-[500] text-[#EBEBF4] mb-[2px]">Повідомлення</h3>
+        <p class="text-[13px] font-[500] leading-[1.2] text-neutral mb-[8px]">Опишіть свої питання в цьому полі, і ми відповімо на них. Якщо ви не знаєте, що запитати, залиште поле порожнім, і ми зв'яжемося з вами для консультації.</p>
         <textarea
-            rows="5"
-            placeholder="Например: у меня проблема с оплатой"
-            class="bg-[#353A50] py-[18px] resize-none px-[20px] w-full rounded-[8px] text-[16px] text-neutral placeholder:text-neutral placeholder:opacity-50"
-        />
+          rows="5"
+          placeholder="Наприклад: у мене проблема з оплатою"
+          class="bg-[#353A50] py-[18px] resize-none px-[20px] w-full rounded-[8px] text-[16px] text-neutral placeholder:text-neutral placeholder:opacity-50"
+        ></textarea>
       </label>
       <base-button class="py-[16px] text-[16px] font-[700] leading-[1.2]">
-        Отправить
+        Надіслати
       </base-button>
     </form>
   </section>
@@ -437,35 +456,36 @@ import { usePlansSettings } from '@/composables/usePlansSettings.js'
 const questions = [
   {
     id: 1,
-    question: 'Что такое тендеры и почему это перспективная профессия?',
-    answers: 'Тендеры — это процесс подачи заявок на выполнение работ или поставку товаров для государственных и коммерческих заказчиков. Эта профессия востребована, так как компании и государственные организации постоянно ищут надежных поставщиков через тендеры. Успешное участие в тендерах может принести компании значительные контракты и доходы.'
+    question: 'Що таке тендери і чому це перспективна професія?',
+    answers: 'Тендери — це процес подання заявок на виконання робіт або постачання товарів для державних і комерційних замовників. Ця професія затребувана, оскільки компанії та державні організації постійно шукають надійних постачальників через тендери. Успішна участь у тендерах може принести компанії значні контракти та доходи.'
   },
   {
     id: 2,
-    question: 'Какой опыт нужен, чтобы начать работать в тендерах?',
-    answers: 'Наш курс подходит как для начинающих, так и для тех, кто уже имел опыт работы с тендерами. Мы обучим вас всем необходимым навыкам, от поиска тендеров до подготовки и подачи заявки. Также курс полезен для бизнесменов и предпринимателей, желающих успешно участвовать в тендерах и расширять свой бизнес.'
+    question: 'Який досвід потрібен, щоб почати працювати в тендерах?',
+    answers: 'Наш курс підходить як для початківців, так і для тих, хто вже мав досвід роботи з тендерами. Ми навчимо вас усім необхідним навичкам, від пошуку тендерів до підготовки та подання заявки. Також курс корисний для бізнесменів та підприємців, які бажають успішно брати участь у тендерах і розширювати свій бізнес.'
   },
   {
     id: 3,
-    question: 'Что я узнаю на этом курсе?',
-    answers: 'Вы получите комплексные знания о тендерных процедурах, научитесь искать подходящие тендеры, анализировать конкуренцию, готовить конкурентоспособные предложения и избегать распространённых ошибок. Также будут рассмотрены юридические аспекты и примеры успешных кейсов.'
+    question: 'Що я дізнаюся на цьому курсі?',
+    answers: 'Ви отримаєте комплексні знання про тендерні процедури, навчитеся шукати підходящі тендери, аналізувати конкуренцію, готувати конкурентоспроможні пропозиції та уникати поширених помилок. Також будуть розглянуті юридичні аспекти та приклади успішних кейсів.'
   },
   {
     id: 4,
-    question: 'Сколько времени нужно на прохождение курса?',
-    answers: 'Курс рассчитан на 2 недели, с учётом  лекций, практических заданий и домашних работ. Вы можете проходить курс в своём темпе, так как доступ к материалам будет открыт в течение года.'
+    question: 'Скільки часу потрібно на проходження курсу?',
+    answers: 'Курс розрахований на 2 тижні, з урахуванням лекцій, практичних завдань і домашніх робіт. Ви можете проходити курс у своєму темпі, оскільки доступ до матеріалів буде відкритий протягом року.'
   },
   {
     id: 5,
-    question: 'Как записаться на курс?',
-    answers: 'Записаться на курс можно на нашем сайте, заполнив регистрационную форму и выбрав удобный способ оплаты. После регистрации вы получите доступ к учебным материалам и инструкции по началу обучения.'
+    question: 'Як записатися на курс?',
+    answers: 'Записатися на курс можна на нашому сайті, заповнивши реєстраційну форму та обравши зручний спосіб оплати. Після реєстрації ви отримаєте доступ до навчальних матеріалів та інструкції з початку навчання.'
   },
   {
     id: 6,
-    question: 'Какой поддержкой я могу рассчитывать во время обучения?',
-    answers: 'Мы предоставляем всестороннюю поддержку. Вы можете задавать вопросы преподавателям в чате Telegram и участвовать в обсуждениях на форуме внутри курса. Если у вас уже есть вопросы по курсу, задайте их, и мы оперативно ответим.'
+    question: 'На яку підтримку я можу розраховувати під час навчання?',
+    answers: 'Ми надаємо всебічну підтримку. Ви можете ставити питання викладачам у чаті Telegram і брати участь в обговореннях на форумі всередині курсу. Якщо у вас вже є питання по курсу, задайте їх, і ми оперативно відповімо.'
   }
-]
+];
+
 const { time, startTimer, stopTimer } = useCountdown({key: 'prize_timer', count: 86400});
 
 startTimer()

@@ -8,26 +8,26 @@
     </div>
     <div class="relative px-[20px] top-[-100px]">
       <h2 class="font-[600] leading-[1.2] text-[37px] text-[#fff] mb-[8px]">
-        Ищешь перспективную работу?
+        Шукаєш перспективну роботу?
       </h2>
       <p class="font-[600] leading-[1.2] text-[22px] text-[#fff]">
-        Узнай, как стать юристом без юридического образования!
+        Дійзнайся, як стати юристом без юридичної освіти!
       </p>
       <base-button variant="quiz" :to="{name: 'quiz', params: {id: 1}}" class="w-full mt-[24px]">
-        Пройти тест и получить подарок
+        Пройти тест та отримати подарунок
       </base-button>
     </div>
     <div class="relative top-[-60px] z-[2] bg-[#1D2859] px-[20px] pt-[40px] pb-[20px] gift-bg">
       <div class="bg-[#fff] py-[4px] absolute top-[4px] left-0 w-full overflow-hidden max-w-full h-[26px]">
         <p class="text-[10px] font-[600] text-[#0007B2] whitespace-nowrap inline-block overflow-hidden marquee">
           <span v-for="i of 5" class="inline-block mx-[4px]">
-            СПЕЦИАЛЬНОЕ ПРЕДЛОЖЕНИЕ
+            СПЕЦІАЛЬНА ПРОПОЗИЦІЯ
           </span>
         </p>
       </div>
       <img src="@/assets/images/gift.png" class="absolute bottom-[-50px] right-0 z-[-1] w-[37%]" />
       <h2 class="text-[22px] font-[600] leading-[1.2] text-[#fff]">
-        Пройдите тест сейчас и<br> <span class="text-[#F47AFF]">получите уникальный<br>подарок</span>
+        Пройди тест зараз та<br> <span class="text-[#F47AFF]">отримай унікальний<br>подарунок</span>
         <span class="relative">.
           <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -42,7 +42,7 @@
         </span>
       </h2>
       <base-button variant="quiz" class="!text-[14px] mt-[22px] w-fit" :to="{name: 'quiz', params: {id: 1}}">
-        Получить подарок
+        Отримати подарунок
       </base-button>
     </div>
   </div>

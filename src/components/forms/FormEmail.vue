@@ -20,7 +20,7 @@
         @keydown.enter.prevent
         @click.prevent="onSubmit(values)"
     >
-      Получить промокод
+      Отримати промокод
     </base-button>
   </Form>
 </template>

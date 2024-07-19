@@ -1,7 +1,7 @@
 <template>
   <div class="px-[20px] pt-[40px] pb-[80px] min-h-[100vh] flex flex-col">
     <h2 class="text-[#C7D2FF] text-center text-[16px] font-[600] leading-[1.2] mb-[26px]">
-      Что говорят ученики прощедшие курс «Тендер с нуля»
+      Що кажуть студенти, які пройшли курс
     </h2>
     <div class="flex-1">
       <div class="relative pb-[100px]">
@@ -64,7 +64,7 @@
       <div v-show="reviewIdx >= 6" class="fixed bg-primary bottom-0 left-0 py-[10px] px-[20px] w-full">
         <div class="max-w-[32rem] mx-auto">
           <base-button variant="quiz" :to="nextQuestionPath" class="w-full">
-            Продолжить
+            Продовжити
           </base-button>
         </div>
       </div>

@@ -2,14 +2,14 @@
   <div class="relative pt-[12px] min-h-[100vh] flex flex-col">
     <div class="px-[20px] pb-[24px] flex-1">
       <router-link
-          :to="{name: 'landing'}"
-          class="block text-[#C7D2FF] transition duration-1000 text-[15px] leading-[1.2] tracking-[-1px] ml-auto w-fit mb-[10px] opacity-0"
-          :class="{'opacity-100': showSkip}"
+        :to="{name: 'landing'}"
+        class="block text-[#C7D2FF] transition duration-1000 text-[15px] leading-[1.2] tracking-[-1px] ml-auto w-fit mb-[10px] opacity-0"
+        :class="{'opacity-100': showSkip}"
       >
-        Пропустить
+        Пропустити
       </router-link>
       <h2 class="relative text-[#fff] font-[600] leading-[1.2] tracking-[-1px] text-[26px] text-center mb-[20px]">
-        🎁 Ваш <span class="text-[#F47AFF]">эксклюзивный<br>промокод</span> уже здесь! 🎁
+        🎁 Ваш <span class="text-[#F47AFF]">ексклюзивний<br>промокод</span> вже тут! 🎁
       </h2>
       <div class="w-full grid place-items-center z-[-1] mb-[15px]">
         <div class="relative">
@@ -19,7 +19,7 @@
         <img src="@/assets/images/email-coffetti.png" class="absolute top-[20px] left-0 z-[-1]" />
       </div>
       <h2 class="text-[#fff] text-[22px] font-[600] leading-[1.3] tracking-[-0.4px] mb-[12px]">
-        Введите вашу почту, чтобы получить персональную скидку на курс по тендерам.
+        Введіть вашу пошту, щоб отримати персональну знижку на курс по тендерам.
       </h2>
       <form-email @on-submit="onSubmit" />
     </div>
@@ -27,7 +27,7 @@
       <img src="@/assets/images/stopwatch.png" class="" />
       <div class="absolute top-[16px] left-[20px] right-[20px]">
         <h2 class="text-[22px] font-[700] leading-[1.2] text-[#fff]">
-          Не дайте возможности ускользнуть!
+          Не дайте можливості вислизнути!
         </h2>
         <p class="text-[28px] font-[600] leading-[1.5] text-[#fff] text-center my-[8px]">
           <span class="w-[40px] inline-block">{{ time.minutes }}</span>
@@ -35,12 +35,13 @@
           <span class="w-[40px] inline-block">{{ time.seconds }}</span>
         </p>
         <p class="text-[15px] font-[500] leading-[1.2] text-[#fff]">
-          Если вы не введете свою почту сейчас, вы потеряете подарок и скидку.
+          Якщо ви не введете свою пошту зараз, ви втратите подарунок і знижку.
         </p>
       </div>
     </div>
   </div>
 </template>
+
 <script setup>
 import {useCountdown} from "@/composables/useCountdown";
 import {ref} from "vue";

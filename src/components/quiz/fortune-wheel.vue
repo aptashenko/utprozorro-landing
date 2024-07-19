@@ -12,10 +12,10 @@
         :settings="playSettings"
         @set-prize="setPrize"
     />
-    <div class="py-[12px] bg-wrapper mt-[-10px]">
+    <div class="p-[12px] bg-wrapper mt-[-10px]">
       <img :src="resultEmoji" class="block w-[40px] mx-auto mb-[10px]" />
       <p v-if="prize" class="text-[22px] font-[700] leading-[1.2] text-center text-[#FFCEE6] mb-[10px]">
-        {{ prize }}% скидка
+        {{ prize }}% знижка
       </p>
       <p class="text-[16px] font-[700] leading-[1.2] text-center text-[#FFCEE6]" v-html="resultText" />
     </div>
@@ -39,7 +39,7 @@
               class="w-full"
               @click="endGame"
           >
-            Забрать скидку
+            Взяти знижку
           </base-button>
         </transition>
       </div>
@@ -89,11 +89,11 @@ const setPrize = value => {
 
 const resultText = computed(() => {
   const texts = [
-      'Испытайте удачу с нашим Колесом!<br>У вас 3 попытки выиграть максимальную скидку.',
-      'Не повезло! Но не расстраивайтесь,<br>попробуйте снова!',
-      'Поздравляем!<br>Отличная возможность сэкономить!',
-      'Ура! Вам повезло!<br>Это супер классная скидка!'
-  ]
+    'Спробуйте удачу з нашим Колесом!<br>У вас 3 спроби виграти максимальну знижку.',
+    'Не пощастило! Але не засмучуйтесь,<br>спробуйте знову!',
+    'Вітаємо!<br>Чудова можливість зекономити!',
+    'Ура! Вам пощастило!<br>Це супер класна знижка!'
+  ];
 
   return texts[currentTry.value]
 })
@@ -110,7 +110,7 @@ const resultEmoji = computed(() => {
 })
 
 
-const buttonName = computed(() => `Прокрутить: ${playSettings.maxTries - currentTry.value}`)
+const buttonName = computed(() => `Крутити: ${playSettings.maxTries - currentTry.value}`)
 const rotateWheel = () => {
   wheel.value.launchSpin()
   window.scrollTo(0, document.body.scrollHeight);

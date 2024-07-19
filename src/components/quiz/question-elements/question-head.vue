@@ -5,7 +5,7 @@
     </base-button>
     <div>
       <p class="text-[14px] text-[#fff] font-[600] leading-[1.2]">
-        Вопрос {{questionCount}} из {{onlyQuestions.length}}
+        Питання {{questionCount}} з {{onlyQuestions.length}}
       </p>
     </div>
   </div>

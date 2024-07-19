@@ -27,7 +27,7 @@
         <base-button variant="rounded" class="w-full py-[10px]" @click="handleCta">
           Спробувати
         </base-button>
-        <button class="text-[#fff] text-[12px] font-[600] underline w-full leading-[1.2]" @click="toggleComponent">
+        <button class="text-[#fff] text-[12px] font-[600] underline w-full leading-[1.2]" @click="handleSkip">
           НЕ ПОТРІБНО
         </button>
       </div>
@@ -41,7 +41,7 @@ import BaseButton from '@/components/ui/BaseButton.vue'
 import { usePlansSettings } from '@/composables/usePlansSettings.js'
 import { usePopups } from '@/composables/usePopups.js'
 const { setPlan, planIndex, priceSettings } = usePlansSettings();
-const { toggleComponent, openCheckout } = usePopups();
+const { toggleComponent, openCheckout, openAlert } = usePopups();
 
 const handleCta = () => {
   setPlan();
@@ -49,6 +49,16 @@ const handleCta = () => {
   setTimeout(() => {
     openCheckout({price: priceSettings.value})
   }, 1000)
+}
+const handleSkip = () => {
+  toggleComponent();
+  setPlan();
+
+  if (planIndex.value < 2) {
+    setTimeout(() => {
+      openAlert()
+    }, 1000)
+  }
 }
 </script>
 
