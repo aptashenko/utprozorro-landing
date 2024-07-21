@@ -59,7 +59,7 @@ setTimeout(() => {
   showSkip.value = true
 }, 5000)
 
-const onSubmit = async ({email}) => {
+const onSubmit = async email => {
   const success = await addNewUser({email, user_id: usersData.user_id});
   if (success) {
     usersData.email = email;

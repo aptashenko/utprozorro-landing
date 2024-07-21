@@ -1,6 +1,6 @@
-import { BASIC_PLAN, DEMO_PLAN, DISCOUNT_PLAN } from '@/common/price-configs/index.js'
+import { BASIC_PLAN, DISCOUNT_PLAN } from '@/common/price-configs/index.js'
 import { computed, ref } from 'vue'
-const plans = [BASIC_PLAN, DEMO_PLAN, DISCOUNT_PLAN];
+const plans = [BASIC_PLAN, DISCOUNT_PLAN];
 const planIndex = ref(Number(localStorage.getItem('planIdx') || 0));
 const priceSettings = computed(() => plans[planIndex.value])
 

@@ -16,18 +16,18 @@
           </p>
         </div>
         <p v-if="usersData.promocode" class="text-[#8799C899] text-[18px] font-[600] leading-[1.2] mb-[16px]">
-          Скидка {{usersData.promocode}}%
+          Знижка {{usersData.promocode}}%
         </p>
         <base-button variant="rounded" class="w-full py-[18px] mt-auto">
-          Перейти до сплати
+          Перейти до оплати
         </base-button>
       </div>
       <div>
-        <h2 class="text-[#292758] text-[20px] font-[600] leading-[1.2] mb-[10px]">Этот курс включает:</h2>
+        <h2 class="text-[#292758] text-[20px] font-[600] leading-[1.2] mb-[10px]">Цей курс включає:</h2>
         <ul class="flex flex-col gap-[6px] pb-[12px] border-b-[#DCD4FF] border-b-[1px] border-b-solid">
           <li
-              v-for="({value, text}, key) of price.settings"
-              class="flex items-start gap-[10px]"
+            v-for="({value, text}, key) of price.settings"
+            class="flex items-start gap-[10px]"
           >
             <i-svg :name="{icon: key, dir: 'checkout'}" class="flex-shrink-0" />
             <p class="text-[16px] text-[#292758] leading-[24px] font-[400]">
@@ -39,26 +39,20 @@
         <ul class="flex flex-col pt-[12px] gap-[6px]">
           <li class="flex items-center gap-[10px]">
             <p class="text-[16px] text-[#292758] leading-[24px] font-[400]">
-              <span class="text-[#8799C8]">Уровень:</span>
-              начинающий
+              <span class="text-[#8799C8]">Рівень:</span>
+              початковий
             </p>
           </li>
           <li class="flex items-center gap-[10px]">
             <p class="text-[16px] text-[#292758] leading-[24px] font-[400]">
-              <span class="text-[#8799C8]">График:</span>
-              гибкий график
+              <span class="text-[#8799C8]">Графік:</span>
+              гнучкий графік
             </p>
           </li>
           <li class="flex items-center gap-[10px]">
             <p class="text-[16px] text-[#292758] leading-[24px] font-[400]">
               <span class="text-[#8799C8]">Формат:</span>
-              видео уроки
-            </p>
-          </li>
-          <li class="flex items-center gap-[10px]">
-            <p class="text-[16px] text-[#292758] leading-[24px] font-[400]">
-              Осталось мест в потоке:
-              <span class="font-[600]">9</span>
+              відео уроки
             </p>
           </li>
         </ul>
@@ -84,18 +78,17 @@ const props = defineProps({
   }
 })
 
+const { usersData, setPromoCode } = useQuiz();
 const { planIndex } = usePlansSettings()
-const { usersData } = useQuiz();
 
 const discount = computed(() => usersData.promocode ? props.price.amount * (usersData.promocode / 100) : 0)
 
 const priceToPay = computed(() => (props.price.name === 'basic' ? props.price.amount - discount.value : props.price.amount).toFixed(2).replace('.', ','))
 
 onBeforeUnmount(() => {
-  if (planIndex.value < 2) {
-    setTimeout(() => {
-      openAlert()
-    }, 1000)
+  setPromoCode(60)
+  if (planIndex.value < 1) {
+    setTimeout(openAlert, 1000)
   }
 })
 </script>

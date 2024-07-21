@@ -1,8 +1,8 @@
 <template>
-  <div class="py-[40px] px-[20px]">
-    <the-logo class="mb-[18px]" />
+  <div class="py-[40px] bg-[#F4F5FB] px-[20px]">
+    <the-logo class="mb-[18px] !text-[#2E2F5B]" />
 
-    <a href="mailto:Support.utprozorro@gmail.com" class="text-[#F0EDFB] text-[12px] font-[600] leading-[26px]">
+    <a href="mailto:Support.utprozorro@gmail.com" class="text-[#2E2F5B] text-[12px] font-[600] leading-[26px]">
       Support.utprozorro@gmail.com
     </a>
   </div>

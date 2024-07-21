@@ -5,6 +5,6 @@ export default {
   },
   alert: {
     component: 'AlertWindow',
-    props: {transition: {name: 'slide-top'}}
+    props: {transition: {name: 'fade'}}
   }
 }

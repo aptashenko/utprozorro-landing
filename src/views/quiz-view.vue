@@ -21,21 +21,21 @@ import QuestionHead from "@/components/quiz/question-elements/question-head.vue"
 import QuestionProgress from "@/components/quiz/question-elements/question-progress.vue";
 const { currentQuestion, questionId } = useQuiz();
 const components = {
-  question: 'question.vue',
-  content: 'content-page.vue',
-  'right-place': 'right-place.vue',
-  'users-scores': 'users-scores.vue',
-  'get-knowledge': 'get-knowledge.vue',
-  'reviews-page': 'reviews-page.vue',
-  'loading-page': 'loading-page.vue',
-  'email-page': 'email-page.vue',
-  'fortune-wheel': 'fortune-wheel.vue'
+  question: 'question',
+  content: 'content-page',
+  'right-place': 'right-place',
+  'users-scores': 'users-scores',
+  'get-knowledge': 'get-knowledge',
+  'reviews-page': 'reviews-page',
+  'loading-page': 'loading-page',
+  'email-page': 'email-page',
+  'fortune-wheel': 'fortune-wheel'
 };
 
 const currentComponent = ref(null);
 
 const loadComponent = () => {
-  currentComponent.value = defineAsyncComponent(() => import(`../components/quiz/${components[currentQuestion.value.component]}`));
+  currentComponent.value = defineAsyncComponent(() => import(`../components/quiz/${components[currentQuestion.value.component]}.vue`));
 }
 
 watch(currentQuestion, loadComponent, {immediate: true})

@@ -29,7 +29,7 @@ export default {
             },
             boxShadow: {
                 'faq-box': '0px 5px 16px 0px rgba(8, 15, 52, 0.06)',
-            }
+            },
         },
         fontFamily: {
             sans: ['Montserrat', 'sans-serif'],

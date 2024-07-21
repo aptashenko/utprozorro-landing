@@ -1,63 +1,46 @@
 <template>
-  <Form
-      id="email"
-      @keydown.enter.prevent
-      :validation-schema="schema"
-      v-slot="{ errors, values }"
+  <base-form
+    ref="form"
+    id="emailForm"
+    :form="emailForm"
+    :rules="emailValidation"
+    @submit-event="onSubmit"
+    v-slot="{ errors, values }"
   >
     <base-input
-        name="email"
-        type="email"
-        label="Почта"
-        :value="usersData.email"
-        placeholder="example@gmail.com"
+      v-model="values.email.value"
+      :error="errors.email"
+      name="email"
+      type="email"
+      label="Почта"
+      placeholder="example@gmail.com"
     />
     <base-button
-        :disabled="errors.email || !values.email || loaders.addUser"
-        variant="quiz"
-        type="button"
-        class="w-full mt-[24px]"
-        @keydown.enter.prevent
-        @click.prevent="onSubmit(values)"
+      :disabled="!values.email.value || loaders.addUser"
+      variant="quiz"
+      type="submit"
+      class="w-full mt-[24px]"
     >
       Отримати промокод
     </base-button>
-  </Form>
+  </base-form>
 </template>
 
 <script setup>
-import {Form} from "vee-validate";
-import {defineRule} from "vee-validate";
 import BaseInput from "@/components/ui/BaseInput.vue";
 import BaseButton from "@/components/ui/BaseButton.vue";
 import {useFetchUsers} from "@/composables/useFetchUsers.js";
 import {useQuiz} from "@/composables/useQuiz.js";
-
-const emit = defineEmits(['on-submit'])
+import BaseForm from '@/components/forms/BaseForm.vue'
+import { emailForm, emailValidation } from '@/components/forms/forms-states/email.js'
+import { ref } from 'vue'
 
 const { loaders } = useFetchUsers()
-const { usersData } = useQuiz()
-defineRule('required', value => {
-  if (!value || !value.length) {
-    return 'Це поле обов\'язкове';
-  }
-  return true;
-});
-defineRule('email', value => {
-  if (!value || !value.length) {
-    return true;
-  }
-  if (!/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}/i.test(value)) {
-    return 'Введіть корректний емейл';
-  }
-  return true;
-});
+const emit = defineEmits(['on-submit'])
 
-const onSubmit = async (payload) => {
-  emit('on-submit', payload)
+const form = ref(null)
+const onSubmit = payload => {
+  emit('on-submit', payload.email.value)
 }
 
-const schema = {
-  email: 'required|email',
-};
 </script>

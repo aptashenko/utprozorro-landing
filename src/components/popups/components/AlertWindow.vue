@@ -1,92 +1,66 @@
 <template>
-  <div class="fixed top-[30%] left-0 w-full px-[20px]">
-    <div class="relative border-[#5B7DFB] border-solid border-[1px] overflow-hidden z-[2] max-w-[400px] w-full mx-auto bg-[#20222E] pt-[50px] pb-[24px] px-[10px] rounded-[16px]">
-      <template v-if="planIndex === 0">
-        <h2 class="text-[#fff] text-[18px] font-[600] leading-[1.2]">
-          Спробуйте два урока
-        </h2>
-        <p class="text-[#786CFF] my-[10px] text-[24px] font-[700] leading-[1.2] uppercase">
-          всього за 400₴
-        </p>
-        <p class="text-[#fff] text-[18px] font-[600] leading-[1.2]">
-          замість <span class="line-through font-[500]">1000₴</span> за повний курс
-        </p>
-      </template>
-      <template v-if="planIndex === 1">
-        <h2 class="text-[#fff] text-[18px] font-[600] leading-[1.2]">
-          Спробуйте <span class="text-[#fff] my-[10px] text-[24px] font-[700] leading-[1.2] uppercase">ВЕСЬ КУРС</span>
-        </h2>
-        <p class="text-[#786CFF] my-[10px] text-[24px] font-[700] leading-[1.2] uppercase">
-          всього за 400₴
-        </p>
-        <p class="text-[#fff] text-[18px] font-[600] leading-[1.2]">
-          замість <span class="line-through font-[500]">1000₴</span>
-        </p>
-      </template>
-      <div class="mt-[24px] w-[70%] mx-auto flex flex-col gap-[16px]">
-        <base-button variant="rounded" class="w-full py-[10px]" @click="handleCta">
-          Спробувати
-        </base-button>
-        <button class="text-[#fff] text-[12px] font-[600] underline w-full leading-[1.2]" @click="handleSkip">
-          НЕ ПОТРІБНО
-        </button>
-      </div>
-      <img src="@/assets/images/discount.png" alt="icon" class="absolute animated top-0 right-0 z-[-1] pointer-events-none w-[100px]">
+  <div class="relative z-[2] max-w-[32rem] mx-auto bg-[#20222E] h-[100vh]">
+    <div class="relative z-[3] h-full px-[20px] pt-[100px]">
+      <h2 class="golden-text text-center text-[32px] leading-[1.2] mb-[24px]">
+        Цей шанс не можна пропустити!
+      </h2>
+      <h2 class="text-[#F8FAFC] text-center text-[36px] font-[800] leading-[1.2]">Ексклюзивна знижка</h2>
+      <p class="text-[#F8FAFC] shadow-text text-center text-[80px] flex-1 font-[800] leading-[1.2] text-shadow-discount mb-[45px]">60%</p>
+      <button class="py-[18px] px-[24px] text-[#fff] text-[16px] leading-[1.4] font-[600] w-full button-styles" @click="handleClose">
+        Купити за <span class="line-through opacity-60 text-[12px] font-[500]">1000₴</span> <span class="text-[17px]">400₴</span>
+      </button>
+    </div>
+    <div class="absolute left-0 w-full bottom-0 z-[2]">
+      <img src="@/assets/images/balloons.png" class="relative top-[30vh] z-[2] opacity-40" />
+      <div class="blur-[150px] bg-[#8018FF99] w-[564px] h-[100vh] rounded-full absolute bottom-0 left-0" />
+      <img src="@/assets/images/gift-super-discount.png" class="relative z-[2]" />
     </div>
   </div>
 </template>
 
 <script setup>
-import BaseButton from '@/components/ui/BaseButton.vue'
-import { usePlansSettings } from '@/composables/usePlansSettings.js'
 import { usePopups } from '@/composables/usePopups.js'
-const { setPlan, planIndex, priceSettings } = usePlansSettings();
-const { toggleComponent, openCheckout, openAlert } = usePopups();
+import { usePlansSettings } from '@/composables/usePlansSettings.js'
+import { onBeforeUnmount } from 'vue'
 
-const handleCta = () => {
-  setPlan();
-  toggleComponent()
+const { toggleComponent, openCheckout } = usePopups();
+const { setPlan, priceSettings } = usePlansSettings()
+
+const handleClose = () => {
+  toggleComponent();
+}
+
+onBeforeUnmount(() => {
+  setPlan()
   setTimeout(() => {
     openCheckout({price: priceSettings.value})
-  }, 1000)
-}
-const handleSkip = () => {
-  toggleComponent();
-  setPlan();
-
-  if (planIndex.value < 2) {
-    setTimeout(() => {
-      openAlert()
-    }, 1000)
-  }
-}
+  }, 800)
+})
 </script>
 
 <style scoped>
-@keyframes tada {
-  0% {
-    transform: scale3d(1, 1, 1);
-  }
-
-  10%, 20% {
-    transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, -3deg);
-  }
-
-  30%, 50%, 70%, 90% {
-    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
-  }
-
-  40%, 60%, 80% {
-    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
-  }
-
-  100% {
-    transform: scale3d(1, 1, 1);
-  }
+.button-styles {
+  border-radius: 100px;
+  background: #6B43E6;
+  box-shadow: 0px 0px 12px 0px rgba(68, 56, 102, 0.37);
 }
-.animated {
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  animation-name: tada;
+.golden-text {
+  background: linear-gradient(77deg, #FFC553 9.16%, #E8900C 23.31%, #E3C576 46.78%, #B39356 54.68%, #C2A047 54.69%, #D4D66B 76.89%, #DDBE6E 85.26%, #EBD484 91.42%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-shadow:
+    -1px -1px 0 #FFC553,
+    1px -1px 0 #FFC553,
+    -1px  1px 0 #FFC553,
+    1px  1px 0 #FFC553,
+    0px 2px 4px #fff;
+}
+
+.shadow-text {
+  text-shadow: 0px 0px 7.6px #240F65;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #3F15C3;
 }
 </style>

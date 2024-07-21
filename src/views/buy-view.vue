@@ -85,7 +85,7 @@
         </div>
       </div>
       <p class="text-[#C7D2FF] leading-[1.2] text-[18px] font-[600] mt-[24px]">
-        З діаграми видно, що наш курс забезпечить вам фінансову стабільність, кар'єрний ріст, впевненість та гнучкість, покращуючи всі аспекти вашого життя.
+        З діаграми видно, що наш курс забезпечить вам фінансову стабільність, кар'єрний зріст, впевненість та гнучкість, покращуючи всі аспекти вашого життя.
       </p>
       <base-button variant="rounded" class="w-full mt-[24px] flex items-center justify-center pr-[8px] mb-[31px]" @click="openPayCheckout">
         <span class="flex-1">
@@ -231,8 +231,7 @@
           <span class="bg-[#C4C4FF] rounded-[8px] py-[6px] px-[10px] text-primary text-[14px] font-[600] leading-normal ">Досвід 1-3 роки</span>
         </div>
         <p class="text-neutral leading-[1.3] text-[15px] mb-[24px]">
-          Ми шукаємо енергійного та цілеспрямованого спеціаліста по тендерам, готового розпочати кар'єру в динамічній та перспективній сфері.
-        </p>
+          Основні обов'язки включають пошук тендерів, підготовку пропозицій та співпрацю з різними командами. Вища освіта не обов'язкова.        </p>
       </div>
       <div class="border-[1px] border-[#323B54] rounded-[16px] bg-[#27293A] px-[20px] py-[32px] flex flex-col items-start min-h-[230px] gap-[12px]">
         <h2 class="text-[21px] font-[700] text-[#F3F3F3] mb-[24px]">Молодший спеціаліст по тендерам (без досвіду)</h2>
@@ -288,52 +287,52 @@
     </base-button>
     <img src="@/assets/images/steps-frame.png" class="absolute bottom-0 right-0 blur-[10px] z-[-1]" />
   </section>
-  <section class="px-[20px] bg-primary py-[80px]">
-    <h2 class="text-[32px] font-[700] text-[#fff] mb-[40px] leading-[1.2]">
-      Наші переваги перед іншими
-    </h2>
-    <div class="flex flex-col gap-[16px] max-w-[335px] mx-auto">
-      <div class="relative z-[2] overflow-hidden border-[1px] border-[#323B54] rounded-[16px] bg-[#27293A] px-[20px] pt-[32px] pb-[32px] flex flex-col items-start min-h-[230px] gap-[12px]">
-        <h2 class="text-[21px] font-[700] text-[#F3F3F3]">Зручний онлайн формат</h2>
-        <p class="text-neutral leading-[1.3] text-[15px]">
-          Навчайтеся у будь-який час і в будь-якому місці на нашій зручній платформі.
-        </p>
-      </div>
-      <div class="relative z-[2] overflow-hidden border-[1px] border-[#323B54] rounded-[16px] bg-[#27293A] px-[20px] pt-[32px] pb-[32px] flex flex-col items-start min-h-[230px] gap-[12px]">
-        <h2 class="text-[21px] font-[700] text-[#F3F3F3]">Доступ до закритого співтовариства в Telegram</h2>
-        <p class="text-neutral leading-[1.3] text-[15px]">
-          Отримуйте підтримку, поради та рекомендації від досвідчених фахівців.
-        </p>
-      </div>
-      <div class="relative z-[2] overflow-hidden border-[1px] border-[#323B54] rounded-[16px] bg-[#27293A] px-[20px] pt-[32px] pb-[32px] flex flex-col items-start min-h-[230px] gap-[12px]">
-        <h2 class="text-[21px] font-[700] text-[#F3F3F3]">Платформа для пошуку роботи</h2>
-        <p class="text-neutral leading-[1.3] text-[15px]">
-          Знайдіть роботу прямо на нашій платформі та почніть застосовувати отримані знання на практиці.
-        </p>
-      </div>
-      <div class="relative z-[2] overflow-hidden border-[1px] border-[#323B54] rounded-[16px] bg-[#27293A] px-[20px] pt-[32px] pb-[32px] flex flex-col items-start min-h-[230px] gap-[12px]">
-        <h2 class="text-[21px] font-[700] text-[#F3F3F3]">Форум всередині курсу</h2>
-        <p class="text-neutral leading-[1.3] text-[15px]">
-          Обмінюйтеся досвідом і знаннями з учасниками курсу, обговорюйте актуальні теми та отримуйте нові інсайти, які допоможуть вам у професійному зростанні.
-        </p>
-      </div>
-      <div class="relative z-[2] overflow-hidden border-[1px] border-[#323B54] rounded-[16px] bg-[#27293A] px-[20px] pt-[32px] pb-[32px] flex flex-col items-start min-h-[230px] gap-[12px]">
-        <h2 class="text-[21px] font-[700] text-[#F3F3F3]">Сертифікат про закінчення курсу</h2>
-        <p class="text-neutral leading-[1.3] text-[15px]">
-          Сертифікат, що підтверджує знання, допоможе виділитися серед конкурентів і підвищити шанси на успіх у тендерних закупівлях.
-        </p>
-      </div>
-    </div>
-    <base-button
-        variant="rounded"
-        class="w-full py-[16px] mt-[40px]"
-        @click="openPayCheckout"
-    >
-      Вступити на курс
-    </base-button>
-  </section>
-  <section class="relative z-[2] pt-[80px] pb-[106px] bg-[#F4F5FB] px-[20px]">
-    <h2 class="text-[32px] font-[700] text-[#2E2F5B] mb-[12px] leading-[1.3]">
+<!--  <section class="px-[20px] bg-primary py-[80px]">-->
+<!--    <h2 class="text-[32px] font-[700] text-[#fff] mb-[40px] leading-[1.2]">-->
+<!--      Наші переваги перед іншими-->
+<!--    </h2>-->
+<!--    <div class="flex flex-col gap-[16px] max-w-[335px] mx-auto">-->
+<!--      <div class="relative z-[2] overflow-hidden border-[1px] border-[#323B54] rounded-[16px] bg-[#27293A] px-[20px] pt-[32px] pb-[32px] flex flex-col items-start min-h-[230px] gap-[12px]">-->
+<!--        <h2 class="text-[21px] font-[700] text-[#F3F3F3]">Зручний онлайн формат</h2>-->
+<!--        <p class="text-neutral leading-[1.3] text-[15px]">-->
+<!--          Навчайтеся у будь-який час і в будь-якому місці на нашій зручній платформі.-->
+<!--        </p>-->
+<!--      </div>-->
+<!--      <div class="relative z-[2] overflow-hidden border-[1px] border-[#323B54] rounded-[16px] bg-[#27293A] px-[20px] pt-[32px] pb-[32px] flex flex-col items-start min-h-[230px] gap-[12px]">-->
+<!--        <h2 class="text-[21px] font-[700] text-[#F3F3F3]">Доступ до закритого співтовариства в Telegram</h2>-->
+<!--        <p class="text-neutral leading-[1.3] text-[15px]">-->
+<!--          Отримуйте підтримку, поради та рекомендації від досвідчених фахівців.-->
+<!--        </p>-->
+<!--      </div>-->
+<!--      <div class="relative z-[2] overflow-hidden border-[1px] border-[#323B54] rounded-[16px] bg-[#27293A] px-[20px] pt-[32px] pb-[32px] flex flex-col items-start min-h-[230px] gap-[12px]">-->
+<!--        <h2 class="text-[21px] font-[700] text-[#F3F3F3]">Платформа для пошуку роботи</h2>-->
+<!--        <p class="text-neutral leading-[1.3] text-[15px]">-->
+<!--          Знайдіть роботу прямо на нашій платформі та почніть застосовувати отримані знання на практиці.-->
+<!--        </p>-->
+<!--      </div>-->
+<!--      <div class="relative z-[2] overflow-hidden border-[1px] border-[#323B54] rounded-[16px] bg-[#27293A] px-[20px] pt-[32px] pb-[32px] flex flex-col items-start min-h-[230px] gap-[12px]">-->
+<!--        <h2 class="text-[21px] font-[700] text-[#F3F3F3]">Форум всередині курсу</h2>-->
+<!--        <p class="text-neutral leading-[1.3] text-[15px]">-->
+<!--          Обмінюйтеся досвідом і знаннями з учасниками курсу, обговорюйте актуальні теми та отримуйте нові інсайти, які допоможуть вам у професійному зростанні.-->
+<!--        </p>-->
+<!--      </div>-->
+<!--      <div class="relative z-[2] overflow-hidden border-[1px] border-[#323B54] rounded-[16px] bg-[#27293A] px-[20px] pt-[32px] pb-[32px] flex flex-col items-start min-h-[230px] gap-[12px]">-->
+<!--        <h2 class="text-[21px] font-[700] text-[#F3F3F3]">Сертифікат про закінчення курсу</h2>-->
+<!--        <p class="text-neutral leading-[1.3] text-[15px]">-->
+<!--          Сертифікат, що підтверджує знання, допоможе виділитися серед конкурентів і підвищити шанси на успіх у тендерних закупівлях.-->
+<!--        </p>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <base-button-->
+<!--        variant="rounded"-->
+<!--        class="w-full py-[16px] mt-[40px]"-->
+<!--        @click="openPayCheckout"-->
+<!--    >-->
+<!--      Вступити на курс-->
+<!--    </base-button>-->
+<!--  </section>-->
+  <section class="relative z-[2] pt-[80px] pb-[106px] bg-primary px-[20px]">
+    <h2 class="text-[32px] font-[700] text-[#fff] mb-[12px] leading-[1.3]">
       Часто задавані питання
     </h2>
     <p class="text-[#22233C] text-[15px] leading-[1.2] mb-[12px]">
@@ -376,9 +375,9 @@
     </base-button>
     <img src="@/assets/images/faq-frame.png" class="absolute bottom-0 right-0 blur-[10px] z-[-1]" />
   </section>
-  <section class="bg-primary py-[80px]">
+  <section class="bg-[#F4F5FB] py-[80px]">
     <div class="px-[20px]">
-      <h2 class="text-[32px] font-[700] text-[#fff] mb-[40px] leading-[1.2]">
+      <h2 class="text-[32px] font-[700] text-[#2E2F5B] mb-[40px] leading-[1.2]">
         Відгуки студентів
       </h2>
     </div>
@@ -407,38 +406,15 @@
       </swiper-slide>
     </swiper-container>
   </section>
-  <section id="callback" class="relative z-[2] pt-[80px] pb-[106px] bg-[#F4F5FB] px-[20px]">
-    <h2 class="text-[32px] font-[700] text-[#2E2F5B] mb-[12px] leading-[1.3]">
+  <section id="callback" class="relative z-[2] pt-[80px] pb-[106px] bg-primary px-[20px]">
+    <h2 class="text-[32px] font-[700] text-[#fff] mb-[12px] leading-[1.3]">
       Допоможемо вирішити всі питання
     </h2>
-    <p class="text-[15px] leading-[1.2] text-[#22233C] mb-[40px]">
+    <p class="text-[15px] leading-[1.2] text-[#fff] mb-[40px]">
       Якщо ви хочете дізнатися більше про тендери або потребуєте консультації щодо їх організації, залиште заявку — і ми зв'яжемося з вами.
     </p>
 
-    <form id="supportForm" class="px-[20px] bg-primary py-[40px] rounded-[12px] flex flex-col gap-[18px]">
-      <label>
-        <h3 class="text-[18px] font-[500] text-[#EBEBF4] mb-[2px]">Електронна пошта</h3>
-        <p class="text-[13px] font-[500] leading-[1.2] text-neutral mb-[8px]">Так ми з вами зв'яжемося.</p>
-        <input type="email" placeholder="Example@gmail.com" class="bg-[#353A50] py-[18px] px-[20px] w-full rounded-[8px] text-[16px] text-neutral placeholder:text-neutral placeholder:opacity-50" />
-      </label>
-      <label>
-        <h3 class="text-[18px] font-[500] text-[#EBEBF4] mb-[2px]">Ім'я</h3>
-        <p class="text-[13px] font-[500] leading-[1.2] text-neutral mb-[8px]">Як ми можемо до вас звертатися.</p>
-        <input type="text" placeholder="Даша" class="bg-[#353A50] py-[18px] px-[20px] w-full rounded-[8px] text-[16px] text-neutral placeholder:text-neutral placeholder:opacity-50" />
-      </label>
-      <label>
-        <h3 class="text-[18px] font-[500] text-[#EBEBF4] mb-[2px]">Повідомлення</h3>
-        <p class="text-[13px] font-[500] leading-[1.2] text-neutral mb-[8px]">Опишіть свої питання в цьому полі, і ми відповімо на них. Якщо ви не знаєте, що запитати, залиште поле порожнім, і ми зв'яжемося з вами для консультації.</p>
-        <textarea
-          rows="5"
-          placeholder="Наприклад: у мене проблема з оплатою"
-          class="bg-[#353A50] py-[18px] resize-none px-[20px] w-full rounded-[8px] text-[16px] text-neutral placeholder:text-neutral placeholder:opacity-50"
-        ></textarea>
-      </label>
-      <base-button class="py-[16px] text-[16px] font-[700] leading-[1.2]">
-        Надіслати
-      </base-button>
-    </form>
+    <form-support />
   </section>
   <the-footer />
 </template>
@@ -453,6 +429,7 @@ import {usePopups} from "@/composables/usePopups.js";
 import {useQuiz} from "@/composables/useQuiz.js";
 import { useCountdown } from '@/composables/useCountdown.js'
 import { usePlansSettings } from '@/composables/usePlansSettings.js'
+import FormSupport from '@/components/forms/FormSupport.vue'
 const questions = [
   {
     id: 1,
@@ -497,6 +474,8 @@ const { priceSettings } = usePlansSettings();
 const openPayCheckout = () => {
   openCheckout({price: priceSettings.value})
 }
+console.log(priceSettings.value)
+
 </script>
 
 <style scoped>
