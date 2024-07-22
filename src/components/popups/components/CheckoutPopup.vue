@@ -11,16 +11,18 @@
           <p class="text-[32px] leading-[1.2] text-[#292758] font-[600] text-center">
             {{ priceToPay }}₴
           </p>
-          <p v-if="usersData.promocode || price.name !== 'basic'" class="text-[20px] leading-[1.2] line-through text-[#29275899] font-[500]">
+          <p v-if="usersData.discount || price.name !== 'basic'" class="text-[20px] leading-[1.2] line-through text-[#29275899] font-[500]">
             1000,00₴
           </p>
         </div>
-        <p v-if="usersData.promocode" class="text-[#8799C899] text-[18px] font-[600] leading-[1.2] mb-[16px]">
-          Знижка {{usersData.promocode}}%
+        <p v-if="usersData.discount" class="text-[#8799C899] text-[18px] font-[600] leading-[1.2] mb-[16px]">
+          Знижка {{usersData.discount}}%
         </p>
-        <base-button variant="rounded" class="w-full py-[18px] mt-auto">
-          Перейти до оплати
-        </base-button>
+        <a :href="price.link">
+          <base-button variant="rounded" class="w-full py-[18px] mt-auto">
+            Перейти до оплати
+          </base-button>
+        </a>
       </div>
       <div>
         <h2 class="text-[#292758] text-[20px] font-[600] leading-[1.2] mb-[10px]">Цей курс включає:</h2>
@@ -73,20 +75,20 @@ const { toggleComponent, openAlert } = usePopups()
 
 const props = defineProps({
   price: {
-    type: Number,
+    type: Object,
     required: true
   }
 })
 
-const { usersData, setPromoCode } = useQuiz();
+const { usersData, setDiscount } = useQuiz();
 const { planIndex } = usePlansSettings()
 
-const discount = computed(() => usersData.promocode ? props.price.amount * (usersData.promocode / 100) : 0)
+const discount = computed(() => usersData.discount ? props.price.amount * (usersData.discount / 100) : 0)
 
 const priceToPay = computed(() => (props.price.name === 'basic' ? props.price.amount - discount.value : props.price.amount).toFixed(2).replace('.', ','))
 
 onBeforeUnmount(() => {
-  setPromoCode(60)
+  setDiscount(60)
   if (planIndex.value < 1) {
     setTimeout(openAlert, 1000)
   }

@@ -2,7 +2,7 @@ import {useQuiz} from "@/composables/useQuiz.js";
 
 export const isNewUser = (to) => {
     const { questions, usersData } = useQuiz();
-    const isOldUser = usersData?.promocode;
+    const isOldUser = usersData?.discount;
 
     if (isOldUser > 1) {
         return {name: 'landing'}

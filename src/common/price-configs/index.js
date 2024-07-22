@@ -8,19 +8,8 @@ export const BASIC_PLAN = {
         infinity: {text: 'Повний довічний доступ'},
         devices: {text: 'Доступ через мобільні пристрої та комп’ютери'},
         certificate: {text: 'Сертифікат про закінчення'},
-    }
-}
-
-export const DEMO_PLAN = {
-    name: 'demo',
-    amount: 400,
-    settings: {
-        lessons: {value: 2, text: 'уроки'},
-        video: {value: 1, text: 'година відео'},
-        content: {value: 2, text: 'конспекти'},
-        infinity: {text: 'Повний довічний доступ'},
-        devices: {text: 'Доступ через мобільні пристрої та комп’ютери'},
-    }
+    },
+    link: 'https://aptashenko2019gmailcom.lms.softbook.app/shop/item/6695'
 }
 
 export const DISCOUNT_PLAN = {
@@ -33,5 +22,6 @@ export const DISCOUNT_PLAN = {
         infinity: {text: 'Повний довічний доступ'},
         devices: {text: 'Доступ через мобільні пристрої та комп’ютери'},
         certificate: {text: 'Сертифікат про закінчення'},
-    }
+    },
+    link: 'https://aptashenko2019gmailcom.lms.softbook.app/shop/item/6922'
 }

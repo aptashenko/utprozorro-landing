@@ -3,9 +3,10 @@ import questionsContent from "@/common/quiz-configs/content.json";
 import {useRouter} from "vue-router";
 const defaultUsersData = {
     answers: {},
-    promocode: null,
+    discount: null,
     email: null,
-    user_id: null
+    user_id: null,
+    promocode: null
 }
 const savedUsersData = JSON.parse(localStorage.getItem('usersData'));
 const usersData = reactive(savedUsersData || defaultUsersData);
@@ -138,6 +139,10 @@ export function useQuiz() {
 
     const questionCount = computed(() => onlyQuestions.value.findIndex(item => item.question === currentQuestion.value.question) + 1)
 
+    const setPromoCode = value => {
+        usersData.promocode = value;
+        localStorage.setItem('usersData', JSON.stringify(usersData))
+    }
 
     const quizProgress = computed(() => (questionCount.value / onlyQuestions.value.length) * 100)
     const setAnswer = answer => {
@@ -146,8 +151,8 @@ export function useQuiz() {
         localStorage.setItem('usersData', JSON.stringify(usersData))
     }
 
-    const setPromoCode = value => {
-        usersData.promocode = value;
+    const setDiscount = value => {
+        usersData.discount = value;
         localStorage.setItem('usersData', JSON.stringify(usersData))
     }
 
@@ -173,6 +178,7 @@ export function useQuiz() {
         usersData,
         onlyQuestions,
         questionCount,
+        setDiscount,
         setPromoCode
     }
 }

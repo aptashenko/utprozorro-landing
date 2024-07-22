@@ -1,5 +1,6 @@
 import {reactive, ref} from "vue";
 import {FETCH} from "@/api/index.js";
+import { useQuiz } from '@/composables/useQuiz.js'
 
 const userList = ref(null);
 const loaders = reactive({
@@ -8,6 +9,7 @@ const loaders = reactive({
     support: false
 })
 export function useFetchUsers() {
+    const { setPromoCode } = useQuiz();
     const getAllUsers = async () => {
         try {
             const {data, status} = await FETCH.users.GET_LIST();
@@ -37,8 +39,9 @@ export function useFetchUsers() {
     const sendPromocode = async (payload) => {
         loaders.sendMail = true
         try {
-            const { status } = await FETCH.users.SEND_EMAIL(payload)
+            const { data, status } = await FETCH.users.SEND_EMAIL(payload)
             if (status === 200) {
+                setPromoCode(data.promocode)
                 return true
             }
         } catch (er) {
