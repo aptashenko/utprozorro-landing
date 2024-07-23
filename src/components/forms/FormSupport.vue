@@ -1,5 +1,6 @@
 <template>
   <base-form
+    v-if="!formSubmitted"
     ref="form"
     :form="supportForm"
     :rules="supportValidation"
@@ -13,12 +14,27 @@
       <input
         v-model="values.email.value"
         type="email"
-        placeholder="Example@gmail.com"
+        placeholder="example@gmail.com"
         class="bg-[#353A50] py-[18px] px-[20px] w-full rounded-[8px] text-[16px] text-neutral placeholder:text-neutral placeholder:opacity-50"
       />
       <transition name="fade" mode="out-in">
         <p class="absolute top-[100%] text-error text-[12px]" v-show="errors.email">
           {{ errors.email }}
+        </p>
+      </transition>
+    </label>
+    <label class="relative">
+      <h3 class="text-[18px] font-[500] text-[#EBEBF4] mb-[2px]">Телеграм</h3>
+      <p class="text-[13px] font-[500] leading-[1.2] text-neutral mb-[8px]">Так отримаєте відповідь швидше.</p>
+      <input
+        v-model="values.telegram.value"
+        type="text"
+        placeholder="@ptashenko_art"
+        class="bg-[#353A50] py-[18px] px-[20px] w-full rounded-[8px] text-[16px] text-neutral placeholder:text-neutral placeholder:opacity-50"
+      />
+      <transition name="fade" mode="out-in">
+        <p class="absolute top-[100%] text-error text-[12px]" v-show="errors.telegram">
+          {{ errors.telegram }}
         </p>
       </transition>
     </label>
@@ -54,27 +70,39 @@
     </label>
     <base-button
       class="py-[16px] text-[16px] font-[700] leading-[1.2]"
-      :disabled="Object.values(values).some(input => !input.value)"
+      :disabled="disableRules"
+      :loading="loaders.support"
     >
       Надіслати
     </base-button>
   </base-form>
+  <div v-else>
+    <h2 class="font-[600] text-[#fff] text-center">Дякуємо!<br>Ми вже отримали Ваш запит та опрацьовуємо його!</h2>
+  </div>
 </template>
 <script setup>
 import BaseButton from '@/components/ui/BaseButton.vue'
 import BaseForm from '@/components/forms/BaseForm.vue'
 import { supportForm, supportValidation } from '@/components/forms/forms-states/support.js'
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
 import { useFetchUsers } from '@/composables/useFetchUsers.js'
 const form = ref(null);
-const { sendSupport } = useFetchUsers()
-const onSubmit = payload => {
+const formSubmitted = ref(false)
+const { sendSupport, loaders } = useFetchUsers()
+const onSubmit = async payload => {
   const data = {
     email: payload.email.value,
+    name: payload.name.value,
+    telegram: payload.telegram.value,
     text: payload.message.value
   }
-
-  sendSupport(data)
+  formSubmitted.value = await sendSupport(data)
 }
+
+const disableRules = computed(() => {
+  const requiredInputs = Object.values(form.value?.formsClone || {}).filter(input => input.required);
+  return requiredInputs.some(input => !input.value)
+})
+
 
 </script>

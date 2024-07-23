@@ -16,7 +16,8 @@
       placeholder="example@gmail.com"
     />
     <base-button
-      :disabled="!values.email.value || loaders.addUser"
+      :disabled="!values.email.value"
+      :loading="loaders.addUser"
       variant="quiz"
       type="submit"
       class="w-full mt-[24px]"
@@ -30,7 +31,6 @@
 import BaseInput from "@/components/ui/BaseInput.vue";
 import BaseButton from "@/components/ui/BaseButton.vue";
 import {useFetchUsers} from "@/composables/useFetchUsers.js";
-import {useQuiz} from "@/composables/useQuiz.js";
 import BaseForm from '@/components/forms/BaseForm.vue'
 import { emailForm, emailValidation } from '@/components/forms/forms-states/email.js'
 import { ref } from 'vue'

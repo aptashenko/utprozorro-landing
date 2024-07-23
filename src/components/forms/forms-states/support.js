@@ -6,6 +6,14 @@ export const supportForm = {
     value: '',
     valid: false,
     validationError: '',
+    serverError: '',
+    required: true,
+  },
+  telegram: {
+    id: 'telegram',
+    value: '',
+    valid: false,
+    validationError: '',
     serverError: ''
   },
   name: {
@@ -16,11 +24,12 @@ export const supportForm = {
     serverError: ''
   },
   message: {
-    id: 'support',
+    id: 'message',
     value: '',
     valid: false,
     validationError: '',
-    serverError: ''
+    serverError: '',
+    required: true
   }
 }
 
@@ -31,6 +40,11 @@ export const supportValidation = {
       email,
       minLength: minLength(4)
     },
+  },
+  telegram: {
+    value: {
+      minLength: minLength(3)
+    }
   },
   name: {
     value: {

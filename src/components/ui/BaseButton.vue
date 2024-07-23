@@ -2,19 +2,25 @@
   <component
       :is="to ? RouterLink : 'button'"
       :to="to"
-      :class="[buttonStyle, 'transition', {'opacity-30': $attrs.disabled}]"
+      :class="[buttonStyle, 'transition', {'opacity-30': $attrs.disabled || loading}]"
   >
-    <slot />
+    <the-spinner v-if="loading" class="mx-auto" />
+    <slot v-else />
   </component>
 </template>
 
 <script setup>
 import {computed} from "vue";
 import {RouterLink} from "vue-router";
+import TheSpinner from '@/components/ui/TheSpinner.vue'
 const props = defineProps({
   variant: {
     type: String,
     default: 'empty'
+  },
+  loading: {
+    type: Boolean,
+    default: false
   },
   to: {
     type: [String, Object],

@@ -6,7 +6,8 @@ const userList = ref(null);
 const loaders = reactive({
     sendMail: false,
     addUser: false,
-    support: false
+    support: false,
+    payment: false
 })
 export function useFetchUsers() {
     const { setPromoCode } = useQuiz();

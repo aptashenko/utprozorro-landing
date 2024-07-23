@@ -1,5 +1,5 @@
 <template>
-  <div class="px-[20px] py-[40px]">
+  <div class="px-[20px] py-[40px] pb-[100px]">
     <h2 class="text-[#C7D2FF] text-center text-[16px] font-[600] leading-[1.2] mb-[26px]">
       Отримайте повні знання про тендери<br>на UTPROZORRO та зробіть крок до<br>успішної кар'єри
     </h2>
@@ -49,14 +49,17 @@
       </transition>
     </div>
     <transition name="slide-left" mode="out-in">
-      <base-button
-          v-show="plusesList.length === pluses.length && minusesList.length === minuses.length"
-          variant="quiz"
-          class="mt-[18px] w-full"
-          :to="nextQuestionPath"
-      >
-        Продовжити
-      </base-button>
+      <div v-show="plusesList.length === pluses.length && minusesList.length === minuses.length" class="fixed bottom-0 left-0 py-[20px] px-[20px] w-full z-[10]">
+        <div class="max-w-[32rem] mx-auto">
+          <base-button
+              variant="quiz"
+              class="w-full"
+              :to="nextQuestionPath"
+          >
+            Продовжити
+          </base-button>
+        </div>
+      </div>
     </transition>
   </div>
 </template>

@@ -44,7 +44,7 @@
 
 <script setup>
 import {useCountdown} from "@/composables/useCountdown";
-import {ref} from "vue";
+import { onBeforeUnmount, ref } from 'vue'
 import FormEmail from "@/components/forms/FormEmail.vue";
 import {useQuiz} from "@/composables/useQuiz.js";
 import {useRouter} from "vue-router";
@@ -69,6 +69,8 @@ const onSubmit = async email => {
 }
 
 startTimer();
+
+onBeforeUnmount(stopTimer)
 </script>
 
 

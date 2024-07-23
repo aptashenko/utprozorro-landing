@@ -36,6 +36,7 @@
               v-if="prize"
               :variant="currentTry !== playSettings.maxTries ? 'fortune-inverse' : 'fortune'"
               :disabled="wheel?.isSpinning"
+              :loading="loaders.sendMail"
               class="w-full"
               @click="endGame"
             >
@@ -73,7 +74,7 @@ import {useQuiz} from "@/composables/useQuiz.js";
 import {useFetchUsers} from "@/composables/useFetchUsers.js";
 
 const router = useRouter();
-const { sendPromocode } = useFetchUsers();
+const { sendPromocode, loaders } = useFetchUsers();
 const { lastQuestionRedirect, setDiscount, usersData } = useQuiz();
 const wheel = ref(null)
 const gameRules = [

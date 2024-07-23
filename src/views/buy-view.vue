@@ -1,15 +1,11 @@
 <template>
-  <div :class="{'pt-[75px]': usersData.promocode}">
-    <div v-if="usersData.promocode" class="fixed top-0 left-0 z-[100] w-full">
-      <div class="max-w-[32rem] h-[75px] mx-auto bg-[#ffcc00] rounded-b-[10px] py-[10px] px-[24px] text-center">
-        <p class="font-[600] text-primary">
-          Ваш промокод на знижку ({{usersData.discount}}%):
-          <span class="bg-primary block w-fit mx-auto text-[#fff] p-[5px] rounded-[10px]">
-            {{usersData.promocode}}
-          </span>
-        </p>
-      </div>
-    </div>
+  <div :class="{'pt-[75px]': usersData.discount}">
+    <transition name="slide-top" mode="out-in">
+      <template v-if="usersData.discount">
+        <discount-bar v-if="usersData.discount === 60" />
+        <promocode-bar v-else />
+      </template>
+    </transition>
     <the-header />
     <div>
       <main class="relative mx-auto">
@@ -354,11 +350,12 @@
           Не знайшли відповідь на своє питання?<br>
           <span class="font-[700]">Надішліть заявку</span> і ми вам відповімо найближчим часом.
         </p>
-        <a href="#callback">
-          <base-button class="bg-[#EDE9FF] text-[#202430] text-[16px] py-[16px] w-full mb-[40px] font-[700]">
-            Задати питання
-          </base-button>
-        </a>
+        <base-button
+          class="bg-[#EDE9FF] text-[#202430] text-[16px] py-[16px] w-full mb-[40px] font-[700]"
+          @click="scrollTo('callback')"
+        >
+          Задати питання
+        </base-button>
         <div class="flex flex-col gap-[16px] mb-[40px]">
           <div
             v-for="(question, idx) in collapseItems"
@@ -397,7 +394,6 @@
           </h2>
         </div>
         <swiper-container
-          :allow-touch-move="false"
           :autoplay="true"
           slides-per-view="1.5"
           space-between="18"
@@ -447,6 +443,9 @@ import {useQuiz} from "@/composables/useQuiz.js";
 import { useCountdown } from '@/composables/useCountdown.js'
 import { usePlansSettings } from '@/composables/usePlansSettings.js'
 import FormSupport from '@/components/forms/FormSupport.vue'
+import PromocodeBar from '@/components/messages/PromocodeBar.vue'
+import DiscountBar from '@/components/messages/DiscountBar.vue'
+import { scrollTo } from '@/utils/scroll-to.js'
 const questions = [
   {
     id: 1,
@@ -491,7 +490,6 @@ const { priceSettings } = usePlansSettings();
 const openPayCheckout = () => {
   openCheckout({price: priceSettings.value})
 }
-console.log(priceSettings.value)
 
 </script>
 

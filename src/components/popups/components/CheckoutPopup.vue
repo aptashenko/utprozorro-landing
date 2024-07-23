@@ -19,7 +19,12 @@
           Знижка {{usersData.discount}}%
         </p>
         <a :href="price.link">
-          <base-button variant="rounded" class="w-full py-[18px] mt-auto">
+          <base-button
+            variant="rounded"
+            class="w-full py-[18px] mt-auto"
+            :loading="loaders.payment"
+            @click="handlePay"
+          >
             Перейти до оплати
           </base-button>
         </a>
@@ -70,6 +75,7 @@ import {computed, onBeforeUnmount} from "vue";
 import {usePopups} from "@/composables/usePopups.js";
 import {useQuiz} from "@/composables/useQuiz.js";
 import { usePlansSettings } from '@/composables/usePlansSettings.js'
+import { useFetchUsers } from '@/composables/useFetchUsers.js'
 
 const { toggleComponent, openAlert } = usePopups()
 
@@ -81,11 +87,15 @@ const props = defineProps({
 })
 
 const { usersData, setDiscount } = useQuiz();
-const { planIndex } = usePlansSettings()
+const { planIndex } = usePlansSettings();
+const { loaders } = useFetchUsers();
 
 const discount = computed(() => usersData.discount ? props.price.amount * (usersData.discount / 100) : 0)
 
 const priceToPay = computed(() => (props.price.name === 'basic' ? props.price.amount - discount.value : props.price.amount).toFixed(2).replace('.', ','))
+const handlePay = () => {
+  loaders.payment = true;
+}
 
 onBeforeUnmount(() => {
   setDiscount(60)

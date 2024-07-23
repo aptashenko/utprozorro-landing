@@ -1,5 +1,5 @@
 <template>
-  <div class="relative z-[2] max-w-[32rem] mx-auto bg-[#20222E] h-[100vh]">
+  <div class="relative z-[2] max-w-[32rem] mx-auto bg-[#20222E] h-[100dvh]">
     <div class="relative z-[3] h-full px-[20px] pt-[100px]">
       <h2 class="golden-text text-center text-[32px] leading-[1.2] mb-[24px]">
         Цей шанс не можна пропустити!
@@ -7,7 +7,7 @@
       <h2 class="text-[#F8FAFC] text-center text-[36px] font-[800] leading-[1.2]">Ексклюзивна знижка</h2>
       <p class="text-[#F8FAFC] shadow-text text-center text-[80px] flex-1 font-[800] leading-[1.2] text-shadow-discount mb-[45px]">60%</p>
       <button class="py-[18px] px-[24px] text-[#fff] text-[16px] leading-[1.4] font-[600] w-full button-styles" @click="handleClose">
-        Купити за <span class="line-through opacity-60 text-[12px] font-[500]">1000₴</span> <span class="text-[17px]">400₴</span>
+        Зрозуміло
       </button>
     </div>
     <div class="absolute left-0 w-full bottom-0 z-[2]">
@@ -23,8 +23,8 @@ import { usePopups } from '@/composables/usePopups.js'
 import { usePlansSettings } from '@/composables/usePlansSettings.js'
 import { onBeforeUnmount } from 'vue'
 
-const { toggleComponent, openCheckout } = usePopups();
-const { setPlan, priceSettings } = usePlansSettings()
+const { toggleComponent } = usePopups();
+const { setPlan } = usePlansSettings()
 
 const handleClose = () => {
   toggleComponent();
@@ -32,9 +32,6 @@ const handleClose = () => {
 
 onBeforeUnmount(() => {
   setPlan()
-  setTimeout(() => {
-    openCheckout({price: priceSettings.value})
-  }, 800)
 })
 </script>
 

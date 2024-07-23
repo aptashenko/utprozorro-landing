@@ -49,5 +49,5 @@ const submit = async () => {
   }
 }
 
-defineExpose({submit})
+defineExpose({submit, formsClone})
 </script>

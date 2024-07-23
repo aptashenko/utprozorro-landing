@@ -10,6 +10,11 @@ export default {
     minLength: 'Занадто коротке ім\'я',
     maxLength: 'Занадто довге ім\'я'
   },
+  telegram: {
+    required: 'Введіть telegram',
+    minLength: 'Занадто коротке',
+    maxLength: 'Занадто довге'
+  },
   message: {
     required: 'Введіть повідомлення',
     minLength: 'Занадто коротке повідомлення',
