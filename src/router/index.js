@@ -39,7 +39,14 @@ const router = createRouter({
       component: () => import('@/views/payment-success-view.vue'),
       beforeEnter: isRedirected
     }
-  ]
+  ],
+  scrollBehavior() {
+    return new Promise((resolve) => {
+      resolve({ left: 0, top: 0 });
+    });
+  },
 })
+
+
 
 export default router

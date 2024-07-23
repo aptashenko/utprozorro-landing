@@ -227,7 +227,8 @@
         </p>
         <div class="flex flex-col gap-[16px] mb-[40px]">
           <div class="border-[1px] border-[#323B54] rounded-[16px] bg-[#27293A] px-[20px] py-[32px] flex flex-col items-start min-h-[230px] gap-[12px]">
-            <h2 class="text-[21px] font-[700] text-[#F3F3F3] mb-[24px]">Спеціаліст із публічних закупівель</h2>
+            <h2 class="text-[21px] font-[700] text-[#F3F3F3]">Спеціаліст із публічних закупівель</h2>
+            <p class="font-[600] text-[#fff]">22 000₴</p>
             <div class="flex items-center gap-[6px] mb-[16px]">
               <span class="bg-[#C4C4FF] rounded-[8px] py-[6px] px-[10px] text-primary text-[14px] font-[600] leading-normal ">Можна віддалено</span>
               <span class="bg-[#C4C4FF] rounded-[8px] py-[6px] px-[10px] text-primary text-[14px] font-[600] leading-normal ">Без досвіду</span>
@@ -237,7 +238,8 @@
             </p>
           </div>
           <div class="border-[1px] border-[#323B54] rounded-[16px] bg-[#27293A] px-[20px] py-[32px] flex flex-col items-start min-h-[230px] gap-[12px]">
-            <h2 class="text-[21px] font-[700] text-[#F3F3F3] mb-[24px]">Тендерний спеціаліст (віддалено)</h2>
+            <h2 class="text-[21px] font-[700] text-[#F3F3F3]">Тендерний спеціаліст (віддалено)</h2>
+            <p class="font-[600] text-[#fff]">25 000 - 30 000₴</p>
             <div class="flex items-center gap-[6px] mb-[16px]">
               <span class="bg-[#C4C4FF] rounded-[8px] py-[6px] px-[10px] text-primary text-[14px] font-[600] leading-normal ">Віддалено</span>
               <span class="bg-[#C4C4FF] rounded-[8px] py-[6px] px-[10px] text-primary text-[14px] font-[600] leading-normal ">Досвід 1-3 роки</span>
@@ -246,7 +248,8 @@
               Основні обов'язки включають пошук тендерів, підготовку пропозицій та співпрацю з різними командами. Вища освіта не обов'язкова.        </p>
           </div>
           <div class="border-[1px] border-[#323B54] rounded-[16px] bg-[#27293A] px-[20px] py-[32px] flex flex-col items-start min-h-[230px] gap-[12px]">
-            <h2 class="text-[21px] font-[700] text-[#F3F3F3] mb-[24px]">Молодший спеціаліст по тендерам (без досвіду)</h2>
+            <h2 class="text-[21px] font-[700] text-[#F3F3F3]">Молодший спеціаліст по тендерам (без досвіду)</h2>
+            <p class="font-[600] text-[#fff]">20 000₴</p>
             <div class="flex items-center gap-[6px] mb-[16px]">
               <span class="bg-[#C4C4FF] rounded-[8px] py-[6px] px-[10px] text-primary text-[14px] font-[600] leading-normal ">Можна віддалено</span>
               <span class="bg-[#C4C4FF] rounded-[8px] py-[6px] px-[10px] text-primary text-[14px] font-[600] leading-normal ">Без досвіду</span>
@@ -267,26 +270,26 @@
           Чому ви навчитесь:
         </h2>
         <div class="flex items-center">
-          <div class="relative flex flex-col gap-[40px] pl-[40px] numeric-dot-line">
+          <div class="relative flex flex-col gap-[40px] pl-[40px] numeric-dot-line flex-1">
             <div class="relative flex flex-col gap-[8px] numeric-dot before:content-['1']">
-              <h3 class="text-[#2E2F5B] text-[22px] font-[700] leading-[1.2]">Основи тендерного процесу</h3>
+              <h3 class="text-[#2E2F5B] text-[18px] font-[700] leading-[1.2]">Основи тендерного процесу</h3>
               <p class="text-[#3C445E] text-[15px] font-[500] leading-[1.2]">Вивчення законодавчої бази, типів тендерів і ключових етапів.</p>
             </div>
             <div class="relative flex flex-col gap-[8px] numeric-dot before:content-['2']">
-              <h3 class="text-[#2E2F5B] text-[22px] font-[700] leading-[1.2]">Підготовка тендерних пропозицій</h3>
-              <p class="text-[#3C445E] text-[15px] font-[500] leading-[1.2]">Практичні навички підготовки документів, комерційних пропозицій і розрахунків.</p>
+              <h3 class="text-[#2E2F5B] text-[18px] font-[700] leading-[1.2]">Ознайомлення з процесами закупівель</h3>
+              <p class="text-[#3C445E] text-[15px] font-[500] leading-[1.2]">Глибоке розуміння всіх етапів процесу публічних закупівель від планування до виконання контрактів.</p>
             </div>
             <div class="relative flex flex-col gap-[8px] numeric-dot before:content-['3']">
-              <h3 class="text-[#2E2F5B] text-[22px] font-[700] leading-[1.2]">Аналіз та оцінка тендерних заявок</h3>
-              <p class="text-[#3C445E] text-[15px] font-[500] leading-[1.2]">Методи оцінки конкурентних пропозицій, критерії вибору переможця.</p>
+              <h3 class="text-[#2E2F5B] text-[18px] font-[700] leading-[1.2]">Робота з тендерною документацією</h3>
+              <p class="text-[#3C445E] text-[15px] font-[500] leading-[1.2]">Навички складання, аналізу та оцінки тендерної документації, включаючи технічні завдання та кваліфікаційні критерії.</p>
             </div>
             <div class="relative flex flex-col gap-[8px] numeric-dot before:content-['4']">
-              <h3 class="text-[#2E2F5B] text-[22px] font-[700] leading-[1.2]">Стратегії участі в тендерах</h3>
-              <p class="text-[#3C445E] text-[15px] font-[500] leading-[1.2]">Тактики підвищення шансів на перемогу, вивчення кейсів успішної участі в тендерах.</p>
+              <h3 class="text-[#2E2F5B] text-[18px] font-[700] leading-[1.2]">Підвищення конкурентоспроможності</h3>
+              <p class="text-[#3C445E] text-[15px] font-[500] leading-[1.2]">Отримання знань та навичок, які допоможуть стати більш конкурентоспроможним на ринку праці у сфері публічних закупівель.</p>
             </div>
             <div class="relative flex flex-col gap-[8px] numeric-dot before:content-['5']">
-              <h3 class="text-[#2E2F5B] text-[22px] font-[700] leading-[1.2]">Практика та кейси</h3>
-              <p class="text-[#3C445E] text-[15px] font-[500] leading-[1.2]">Розбір реальних прикладів, симуляція тендерного процесу.</p>
+              <h3 class="text-[#2E2F5B] text-[18px] font-[700] leading-[1.2]">Управління ризиками</h3>
+              <p class="text-[#3C445E] text-[15px] font-[500] leading-[1.2]">Знання методів і технік для ідентифікації, оцінки та управління ризиками, пов'язаними з публічними закупівлями.</p>
             </div>
           </div>
         </div>
@@ -347,7 +350,7 @@
         <h2 class="text-[32px] font-[700] text-[#fff] mb-[12px] leading-[1.3]">
           Часто задавані питання
         </h2>
-        <p class="text-[#22233C] text-[15px] leading-[1.2] mb-[12px]">
+        <p class="text-[#fff] text-[15px] leading-[1.2] mb-[12px]">
           Не знайшли відповідь на своє питання?<br>
           <span class="font-[700]">Надішліть заявку</span> і ми вам відповімо найближчим часом.
         </p>
