@@ -6,8 +6,8 @@ const headers = {
 };
 
 const baseRequest = axios.create({
-    baseURL: 'http://localhost:5001',
-    // baseURL: 'https://funnel-cms-c130c0e2cf35.herokuapp.com',
+    // baseURL: 'http://localhost:5001',
+    baseURL: 'https://funnel-cms-c130c0e2cf35.herokuapp.com',
     headers: {
         post: headers,
         get: headers,
