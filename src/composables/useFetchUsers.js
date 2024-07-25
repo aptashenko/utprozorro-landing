@@ -7,7 +7,8 @@ const loaders = reactive({
     sendMail: false,
     addUser: false,
     support: false,
-    payment: false
+    payment: false,
+    profile: false
 })
 export function useFetchUsers() {
     const { setPromoCode } = useQuiz();
@@ -70,11 +71,40 @@ export function useFetchUsers() {
         }
     }
 
+    const usePromocode = async id => {
+        loaders.payment = true;
+        try {
+           await FETCH.users.USE_PROMOCODE({ value: id })
+
+        } catch (error) {
+            console.error(error)
+        } finally {
+            loaders.payment = false
+        }
+    }
+
+    const getUsersProfile = async () => {
+        loaders.profile = true;
+
+        try {
+            const { data, status } = await FETCH.users.PROFILE();
+            if (status === 200) {
+                setPromoCode(data.promocode_id)
+            }
+        } catch (error) {
+            console.error(error)
+        } finally {
+            loaders.profile = false
+        }
+    }
+
     return {
         getAllUsers,
         loaders,
         sendPromocode,
         addNewUser,
-        sendSupport
+        sendSupport,
+        usePromocode,
+        getUsersProfile
     }
 }

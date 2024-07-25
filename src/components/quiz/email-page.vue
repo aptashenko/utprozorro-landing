@@ -60,7 +60,7 @@ setTimeout(() => {
 }, 5000)
 
 const onSubmit = async email => {
-  const success = await addNewUser({email, user_id: usersData.user_id});
+  const success = await addNewUser({email, web_user_id: usersData.user_id});
   if (success) {
     usersData.email = email;
     localStorage.setItem('usersData', JSON.stringify(usersData))

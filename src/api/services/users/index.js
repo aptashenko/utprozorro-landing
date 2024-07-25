@@ -5,4 +5,6 @@ export default (api) => ({
   ADD: (data) => api.post(USERS_URLS.add, data),
   SEND_EMAIL: (data) => api.post(USERS_URLS.send_email, data),
   SUPPORT: (data) => api.post(USERS_URLS.support, data),
+  USE_PROMOCODE: (data) => api.post(USERS_URLS.use_promocode, data),
+  PROFILE: () => api.get(USERS_URLS.profile),
 });

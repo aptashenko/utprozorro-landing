@@ -12,9 +12,11 @@ import BasePopupComponent from "@/components/popups/BasePopupComponent.vue";
 import { useCookies } from '@/composables/useCookies.js'
 import { generateId } from '@/utils/id-generator.js'
 import { useQuiz } from '@/composables/useQuiz.js'
+import { useFetchUsers } from '@/composables/useFetchUsers.js'
 const { globalPopUpState } = usePopups();
 const { usersData } = useQuiz();
 const { getCookie, setCookie } = useCookies();
+const { getUsersProfile } = useFetchUsers()
 const manageUserId = () => {
   const user_id = getCookie('user_id');
   if (!user_id) {
@@ -27,6 +29,7 @@ const manageUserId = () => {
 }
 
 manageUserId()
+getUsersProfile()
 </script>
 
 <style scoped>

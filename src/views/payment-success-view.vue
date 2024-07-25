@@ -22,4 +22,11 @@
 </template>
 <script setup lang="ts">
 import ISvg from '@/components/shared/ISvg.vue'
+import { useFetchUsers } from '@/composables/useFetchUsers';
+import { useQuiz } from '@/composables/useQuiz';
+
+const { usePromocode } = useFetchUsers();
+const { usersData } = useQuiz()
+
+usePromocode(usersData.promocode)
 </script>

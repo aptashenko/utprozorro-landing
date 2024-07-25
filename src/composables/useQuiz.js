@@ -141,6 +141,7 @@ export function useQuiz() {
 
     const setPromoCode = value => {
         usersData.promocode = value;
+        usersData.discount = 25
         localStorage.setItem('usersData', JSON.stringify(usersData))
     }
 
