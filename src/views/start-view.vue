@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-[100vh] bg-[#20222E] pb-[40px]">
+  <div class="min-h-[100dvh] bg-[#20222E] pb-[40px]">
     <div class="relative ml-auto w-[80%]">
       <img src="@/assets/images/woman1_icon1.png" class="absolute top-[130px] left-[-30px] w-[35%] levitate1" />
       <img src="@/assets/images/woman1_icon2.png" class="absolute top-[30px] left-[25px] w-[30%] levitate2" />

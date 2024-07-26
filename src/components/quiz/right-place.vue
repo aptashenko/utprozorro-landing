@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-[100vh] flex flex-col pb-[40px]">
+  <div class="min-h-[100dvh] flex flex-col pb-[40px]">
     <img src="@/assets/images/quiz/quiz-2.png" />
     <div class="px-[20px] flex flex-col flex-1">
       <div class="flex-1">

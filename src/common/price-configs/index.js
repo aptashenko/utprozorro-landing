@@ -9,7 +9,7 @@ export const BASIC_PLAN = {
         devices: {text: 'Доступ через мобільні пристрої та комп’ютери'},
         certificate: {text: 'Сертифікат про закінчення'},
     },
-    link: 'https://aptashenko2019gmailcom.lms.softbook.app/shop/item/6695'
+    link: 'https://utprozorro.lms.softbook.app/shop/item/6695'
 }
 
 export const DISCOUNT_PLAN = {
@@ -23,5 +23,5 @@ export const DISCOUNT_PLAN = {
         devices: {text: 'Доступ через мобільні пристрої та комп’ютери'},
         certificate: {text: 'Сертифікат про закінчення'},
     },
-    link: 'https://aptashenko2019gmailcom.lms.softbook.app/shop/item/6922'
+    link: 'https://utprozorro.lms.softbook.app/shop/item/6922'
 }

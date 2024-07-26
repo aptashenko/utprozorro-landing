@@ -1,5 +1,5 @@
 <template>
-  <div class="relative pt-[12px] min-h-[100vh] flex flex-col">
+  <div class="relative pt-[12px] min-h-[100dvh] flex flex-col">
     <div class="px-[20px] pb-[24px] flex-1">
       <router-link
         :to="{name: 'landing'}"

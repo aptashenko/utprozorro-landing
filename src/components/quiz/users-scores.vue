@@ -1,5 +1,5 @@
 <template>
-  <div class="px-[20px] min-h-[100vh] py-[30px] flex flex-col items-center">
+  <div class="px-[20px] min-h-[100dvh] py-[30px] flex flex-col items-center">
     <div class="relative z-[2] bg-[#AD90FF] rounded-[12px] p-[10px] overflow-hidden">
       <div class="absolute top-0 left-0 right-0 bottom-0 z-[-1] scores-bg" />
       <div class="px-[5px] py-[40px] border-solid border-[1px] rounded-[12px] border-[#fff]">

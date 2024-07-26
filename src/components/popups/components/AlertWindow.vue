@@ -12,7 +12,7 @@
     </div>
     <div class="absolute left-0 w-full bottom-0 z-[2]">
       <img src="@/assets/images/balloons.png" class="relative top-[30vh] z-[2] opacity-40" />
-      <div class="blur-[150px] bg-[#8018FF99] w-[564px] h-[100vh] rounded-full absolute bottom-0 left-0" />
+      <div class="blur-[150px] bg-[#8018FF99] w-[564px] h-[100dvh] rounded-full absolute bottom-0 left-0" />
       <img src="@/assets/images/gift-super-discount.png" class="relative z-[2]" />
     </div>
   </div>

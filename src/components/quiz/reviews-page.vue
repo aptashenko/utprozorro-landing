@@ -1,5 +1,5 @@
 <template>
-  <div class="px-[20px] pt-[40px] pb-[80px] min-h-[100vh] flex flex-col">
+  <div class="px-[20px] pt-[40px] pb-[80px] min-h-[100dvh] flex flex-col">
     <h2 class="text-[#C7D2FF] text-center text-[16px] font-[600] leading-[1.2] mb-[26px]">
       Що кажуть студенти, які пройшли курс
     </h2>

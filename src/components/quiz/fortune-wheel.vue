@@ -1,6 +1,6 @@
 <template>
   <div
-      class="fortune-bg min-h-[100vh] px-[20px] pt-[54px]"
+      class="fortune-bg min-h-[100dvh] px-[20px] pt-[54px]"
       :class="[currentTry !== playSettings.maxTries && prize ? 'pb-[180px]' : 'pb-[100px]']"
   >
     <template v-if="!endPlay">
