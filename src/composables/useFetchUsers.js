@@ -42,6 +42,7 @@ export function useFetchUsers() {
         loaders.sendMail = true
         try {
             const { data, status } = await FETCH.users.SEND_EMAIL(payload)
+            console.log(data)
             if (status === 200) {
                 setPromoCode(data.promocode)
                 return true

@@ -1,15 +1,18 @@
 <template>
   <div class="flex flex-col p-[20px] pb-[40px] min-h-[100dvh] h-full">
-    <div class="bg-[#fff] flex-1 py-[60px] px-[10px]">
+    <div class="bg-[#fff] flex-1 py-[60px] px-[20px]">
       <i-svg name="check-bullet" class="w-[60px] h-[60px] mx-auto mb-[24px]" />
       <h2 class="text-[#292758] text-center text-[24px] leading-[1.2] font-[600] tracking-[-0.32px] mb-[24px]">
         Дякуємо за оплату!
       </h2>
       <p class="text-[#22233C] text-[14px] leading-[1.2] font-[500] tracking-[-0.32px] mb-[18px]">
-        Вітаємо! Ви успішно оплатили курс по навчанню професії тендернго спеціаліста.
+        Ваш платіж наразі обробляється.
       </p>
       <p class="text-[#22233C] text-[14px] leading-[1.2] font-[700] tracking-[-0.32px] mb-[40px]">
-        На ваш email відправлені логін та пароль для входу на нашу платформу.
+        Будь ласка, очікуйте підтвердження результату.
+      </p>
+      <p class="text-[#22233C] text-[14px] leading-[1.2] font-[700] tracking-[-0.32px] mb-[40px]">
+        У разі успішної оплати ви отримаєте електронного листа з доступом до платформи. Якщо оплата не пройде, ми надішлемо вам повідомлення з інформацією про неуспішну транзакцію.
       </p>
       <a href="https://accounts.softbook.app/signin" class="block w-full bg-button-gradient rounded-[100px] text-[#FCFCFC] text-[18px] font-[700] uppercase text-center py-[18px] px-[20px] mb-[40px]">
         Увійти на платформу
